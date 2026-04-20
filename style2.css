@@ -89,6 +89,758 @@ body::before {
     color: #06f80a;
 }
 
+/* The Professional Mastery Search */
+.search-container {
+    max-width: 600px;
+    margin: 30px auto 10px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#bookSearch {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
+    box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+#bookSearch:focus {
+    outline: none;
+    border-color: #06f80a;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 20px rgba(6, 248, 10, 0.2), inset 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+#bookSearch::placeholder {
+    color: rgba(226, 232, 240, 0.5);
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* 3. THE BOOK GRID */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.book-grid:hover>.book-card:not(:hover) {
+    opacity: 0.6;
+    filter: blur(0px);
+    transform: scale(0.98);
+    transition: all 0.4s ease;
+}
+
+/* 4. THE GLASS CARD & ANIMATION */
+.book-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    animation: floatGlow 4s ease-in-out infinite;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.book-card:hover {
+    animation-play-state: paused;
+    transform: translateY(-15px) scale(1.02) !important;
+    border-color: rgba(6, 248, 10, 0.5);
+    box-shadow: 0 15px 40px rgba(6, 248, 10, 0.15), inset 0 0 20px rgba(6, 248, 10, 0.05);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+@keyframes floatGlow {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(6, 248, 10, 0.1);
+    }
+}
+
+.book-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    height: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: grayscale(20%);
+}
+
+.book-card:hover img {
+    transform: scale(1.08) translateY(-5px);
+    filter: grayscale(0%) brightness(1.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* 5. BUTTONS */
+.book-card button {
+    position: relative;
+    z-index: 10;
+    background: #06f80a;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 15px;
+}
+
+.book-card button:hover {
+    background-color: #ff4757 !important;
+    color: white !important;
+    transform: scale(1.1) !important;
+    box-shadow: 0 0 15px rgba(255, 71, 87, 0.6);
+}
+
+/* 6. MODAL & ANIMATION */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.modal.glass-open {
+    display: block;
+    opacity: 1;
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.07) !important;
+    backdrop-filter: blur(25px) !important;
+    margin: 10% auto;
+    padding: 40px;
+    width: 85%;
+    max-width: 600px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 50px rgba(6, 248, 10, 0.2);
+    color: white !important;
+    text-align: center;
+    position: relative;
+    transform: scale(0.7);
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.glass-open .modal-content {
+    transform: scale(1);
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 35px;
+    cursor: pointer;
+    color: white;
+}
+
+#modal-title {
+    color: #06f80a;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+#modal-desc {
+    font-style: normal;
+    line-height: 1.8;
+    text-align: left;
+}
+
+/* 7. SOCIAL PROOF */
+#social-proof {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    color: #e2e8f0;
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transform: translateY(150%);
+    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+#social-proof.show {
+    transform: translateY(0);
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: #06f80a;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #06f80a;
+    animation: pulse-dot 1.5s infinite;
+}
+
+@keyframes pulse-dot {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+/* 8. MASTER CHOICE HIGHLIGHT */
+.book-card.highlight {
+    border: 1.5px solid #ffd700 !important;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.3) !important;
+    animation: floatGlowGold 4s ease-in-out infinite !important;
+}
+
+@keyframes floatGlowGold {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+        box-shadow: 0 25px 50px rgba(255, 215, 0, 0.2);
+    }
+}
+
+.book-card.highlight::before {
+    content: "MASTER RECOMMENDATION";
+    position: absolute;
+    top: 10px;
+    left: -5px;
+    background: #ffd700;
+    color: black;
+    padding: 3px 12px;
+    font-size: 0.6rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    z-index: 20;
+    transform: rotate(-3deg);
+}
+
+/* 9. MOUSE GLOW */
+#mouse-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(6, 248, 10, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    filter: blur(40px);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+body:hover #mouse-glow {
+    opacity: 1;
+}
+
+/* 10. SCARCITY & VISIBILITY */
+.stock-text {
+    font-size: 0.7rem;
+    color: #ff4757;
+    margin-top: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.book-card.hidden {
+    display: none;
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.book-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 11. QUANTUM FIELD ANIMATION */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(6, 248, 10, 0.02) 0%, transparent 80%);
+    z-index: -2;
+    animation: pulseField 10s ease-in-out infinite;
+}
+
+@keyframes pulseField {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+/* 12. PROGRESS BAR */
+.progress-container {
+    max-width: 600px;
+    margin: 10px auto 30px auto;
+    text-align: center;
+    color: rgba(226, 232, 240, 0.6);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 2px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 92%;
+    height: 100%;
+    background: linear-gradient(90deg, #06f80a, #048a06);
+    box-shadow: 0 0 10px rgba(6, 248, 10, 0.5);
+}
+
+/* 13. SCROLL & FOOTER */
+#scrollTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: rgba(6, 248, 10, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(6, 248, 10, 0.3);
+    color: #06f80a;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 4000;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+#scrollTop.show {
+    opacity: 1;
+}
+
+.mastery-footer {
+    margin-top: 100px;
+    padding: 40px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.network-status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.6rem;
+    color: rgba(226, 232, 240, 0.3);
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    background: #06f80a;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #06f80a;
+}
+
+.security-tag {
+    display: inline-block;
+    padding: 5px 15px;
+    background: rgba(6, 248, 10, 0.05);
+    border: 1px solid rgba(6, 248, 10, 0.2);
+    border-radius: 20px;
+    font-size: 0.6rem;
+    color: #06f80a;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* 14. CONTACT SECTION */
+.contact-section {
+    padding: 60px 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 40px;
+    border-radius: 15px;
+    color: #e2e8f0;
+    text-decoration: none;
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-card:hover {
+    background: rgba(6, 248, 10, 0.05);
+    border-color: #06f80a;
+    transform: translateY(-5px);
+}
+
+/* 15. LOCKED & VAULT PROTOCOLS */
+.locked-manuscript {
+    filter: blur(4px) grayscale(100%);
+    pointer-events: none;
+    opacity: 0.6;
+    position: relative;
+}
+
+.lock-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-10deg);
+    background: rgba(255, 0, 0, 0.1);
+    border: 1px solid #ff4757;
+    color: #ff4757;
+    padding: 10px;
+    z-index: 100;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.timer-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    color: #06f80a;
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    padding: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* 16. SECRET TERMINAL & CRIMSON */
+#secret-terminal {
+    position: fixed;
+    bottom: -400px;
+    right: 20px;
+    width: 350px;
+    background: rgba(0, 0, 0, 0.95);
+    border: 1px solid #06f80a;
+    padding: 20px;
+    font-family: 'Courier New', monospace;
+    transition: bottom 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 6000;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 1);
+}
+
+#secret-terminal.active {
+    bottom: 20px;
+}
+
+#terminal-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #06f80a;
+    outline: none;
+}
+
+body.crimson-mode {
+    background: linear-gradient(135deg, #2a0f0f 0%, #170202 100%) !important;
+}
+
+body.crimson-mode .logo,
+body.crimson-mode #terminal-input {
+    color: #ff4757 !important;
+}
+
+/* 17. GLITCH & OBSERVER TRAIL */
+@keyframes glitch-flicker {
+    0% {
+        opacity: 1;
+        transform: skew(0deg);
+    }
+
+    1% {
+        opacity: 0.5;
+        transform: skew(10deg);
+        color: #ff4757;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.glitch-active {
+    animation: glitch-flicker 0.2s infinite;
+}
+
+.cursor-particle {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    background: #06f80a;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 5000;
+    box-shadow: 0 0 10px #06f80a;
+}
+
+/* 18. ANALYSIS PANEL (NEW) */
+#analysis-panel {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 350px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.98);
+    border-left: 2px solid #06f80a;
+    padding: 60px 25px;
+    z-index: 9999;
+    transition: right 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.9);
+}
+
+/* Fix for the visible text leak */
+#analysis-panel {
+    visibility: hidden;
+    /* Ensures it's not seen until 'open' class is added */
+}
+
+#analysis-panel.open {
+    visibility: visible;
+    right: 0;
+}
+
+/* Scarcity Pulse */
+.stock-status {
+    color: #ff4757;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 5px;
+    animation: alert-blink 2s infinite;
+}
+
+@keyframes alert-blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+/* The Observer Ping */
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #06f80a;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #06f80a;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+/* 19. MOBILE REPAIR */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column !important;
+        padding: 15px 10px !important;
+    }
+
+    #navlist {
+        gap: 15px !important;
+        justify-content: center !important;
+    }
+
+    .book-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+
+    #analysis-panel {
+        width: 100%;
+    }
+}
+
+/* 1. THE ENVIRONMENT */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a 0%, #020617 100%);
+    background-attachment: fixed;
+    color: #e2e8f0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    animation: fadeInPage 1.5s ease-in-out;
+}
+
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+        filter: blur(10px);
+    }
+
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+/* Subtle Pulse & Drift */
+body::before {
+    content: "";
+    position: fixed;
+    top: -10%;
+    left: -10%;
+    width: 40%;
+    height: 40%;
+    background: radial-gradient(circle, rgba(6, 248, 10, 0.05) 0%, transparent 70%);
+    filter: blur(50px);
+    z-index: -1;
+    animation: pulse 8s infinite alternate ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(20%, 20%);
+    }
+}
+
+/* 2. DESKTOP NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #06f80a;
+    letter-spacing: 2px;
+}
+
+#navlist {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+#navlist a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#navlist a:hover {
+    color: #06f80a;
+}
+
 /* Line 31+: The Professional Mastery Search */
 .search-container {
     max-width: 600px;
@@ -158,6 +910,7 @@ body::before {
     animation: floatGlow 4s ease-in-out infinite;
     transition: all 0.4s ease;
     cursor: pointer;
+    position: relative;
 }
 
 /* FIX: Interaction Logic - The "Mighty Reaction" */
@@ -229,54 +982,54 @@ body::before {
     box-shadow: 0 0 15px rgba(255, 71, 87, 0.6);
 }
 
-/* 6. MODAL & ANIMATION (Restored) */
 .modal {
     display: none;
     position: fixed;
-    z-index: 2000;
+    z-index: 999;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
-    opacity: 0;
-    transition: opacity 0.5s ease;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(6px);
+    justify-content: center;
+    align-items: center;
 }
 
 .modal.glass-open {
-    display: block;
-    opacity: 1;
+    display: flex;
 }
 
 .modal-content {
-    background: rgba(255, 255, 255, 0.07) !important;
-    backdrop-filter: blur(25px) !important;
-    -webkit-backdrop-filter: blur(25px);
-    margin: 10% auto;
-    padding: 40px;
-    width: 85%;
-    max-width: 600px;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 50px rgba(6, 248, 10, 0.2);
-    color: white !important;
-    text-align: center;
+    background: rgba(20, 20, 20, 0.95);
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
     position: relative;
-    transform: scale(0.7);
-    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.glass-open .modal-content {
-    transform: scale(1);
 }
 
 .close-btn {
     position: absolute;
-    right: 20px;
     top: 10px;
-    font-size: 35px;
+    right: 15px;
     cursor: pointer;
-    color: white;
+    font-size: 24px;
+    color: #06f80a;
+}
+
+/* --- ANIMATION --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 #modal-title {
@@ -290,43 +1043,6 @@ body::before {
     font-style: normal;
     line-height: 1.8;
     text-align: left;
-}
-
-#modal-desc h3 {
-    color: #06f80a;
-    margin-bottom: 10px;
-}
-
-#modal-desc ul {
-    margin-left: 20px;
-    margin-top: 10px;
-}
-
-/* 7. MOBILE REPAIR (Restored) */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column !important;
-        padding: 15px 10px !important;
-        gap: 12px !important;
-        height: auto !important;
-    }
-
-    .navbar .logo {
-        font-size: 1.3rem !important;
-        text-align: center !important;
-        width: 100% !important;
-    }
-
-    #navlist {
-        gap: 15px !important;
-        justify-content: center !important;
-        width: 100% !important;
-    }
-
-    .book-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 12px !important;
-    }
 }
 
 /* Line 161+: Social Proof Styling */
@@ -395,7 +1111,6 @@ body::before {
     }
 }
 
-/* Rare Tag for the Highlighted Book */
 .book-card.highlight::before {
     content: "MASTER RECOMMENDATION";
     position: absolute;
@@ -432,17 +1147,6 @@ body:hover #mouse-glow {
     opacity: 1;
 }
 
-/* Line 251+: Filter Animation */
-.book-card {
-    transition: transform 0.5s, opacity 0.5s, display 0.5s;
-}
-
-.book-card.hidden {
-    display: none;
-    opacity: 0;
-    transform: scale(0.8);
-}
-
 /* Line 270+: Scarcity Text Styling */
 .stock-text {
     font-size: 0.7rem;
@@ -454,20 +1158,8 @@ body:hover #mouse-glow {
     opacity: 0.8;
 }
 
-/* Line 291+: Scroll Reveal Effect */
-.book-card {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.book-card.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 /* Line 311+: The Quantum Field Animation */
-body::before {
+body::after {
     content: "";
     position: fixed;
     top: 0;
@@ -551,7 +1243,6 @@ body::before {
     backdrop-filter: blur(10px);
 }
 
-/* Line 390+: Network Status Styling */
 .network-status {
     display: flex;
     justify-content: center;
@@ -584,55 +1275,6 @@ body::before {
     font-weight: bold;
 }
 
-.mastery-footer p {
-    font-size: 0.7rem;
-    color: rgba(226, 232, 240, 0.4);
-    letter-spacing: 1px;
-}
-
-/* Line 431+: Contact Section Styling */
-.contact-section {
-    padding: 60px 20px;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.2);
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.contact-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
-    flex-wrap: wrap;
-}
-
-.contact-card {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 20px 40px;
-    border-radius: 15px;
-    color: #e2e8f0;
-    text-decoration: none;
-    transition: 0.4s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.contact-card i {
-    font-size: 1.5rem;
-    color: #06f80a;
-}
-
-.contact-card:hover {
-    background: rgba(6, 248, 10, 0.05);
-    border-color: #06f80a;
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
 /* Line 481+: Locked Manuscript Styling */
 .locked-manuscript {
     filter: blur(4px) grayscale(100%);
@@ -654,58 +1296,165 @@ body::before {
     z-index: 100;
     font-size: 0.7rem;
     font-weight: bold;
-    white-space: nowrap;
     letter-spacing: 2px;
-    box-shadow: 0 0 15px rgba(255, 71, 87, 0.3);
 }
 
-.locked-manuscript button {
-    background: #333 !important;
-    cursor: not-allowed;
-}
-
-/* Line 513: Timed Overlay Styling */
-.timer-overlay {
-    background: rgba(0, 0, 0, 0.6);
-    color: #06f80a;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 0.75rem;
-    padding: 8px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 20;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    letter-spacing: 1px;
-}
-
-/* --- THE BLACKOUT PROTOCOL: ENFORCED BOUNDARIES --- */
-
-/* 1. The Container: Blurs and Grays out the book */
-.vault-closed {
-    filter: blur(8px) grayscale(100%) !important;
-    cursor: not-allowed !important;
-    position: relative;
+/* --- THE OBSERVER TRAIL & TERMINAL --- */
+.cursor-particle {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    background: #06f80a;
+    border-radius: 50%;
     pointer-events: none;
-    opacity: 0.5;
-    transition: all 1s ease;
+    z-index: 5000;
+    box-shadow: 0 0 10px #06f80a;
 }
 
-/* 2. The Button: Makes it look like a dead terminal */
-.vault-closed button {
-    background: #1a1a1a !important;
-    color: #444 !important;
-    border: 1px solid #333 !important;
-    box-shadow: none !important;
-    transform: none !important;
-    text-decoration: line-through;
+#secret-terminal {
+    position: fixed;
+    bottom: -400px;
+    right: 20px;
+    width: 350px;
+    background: rgba(0, 0, 0, 0.95);
+    border: 1px solid #06f80a;
+    padding: 20px;
+    font-family: 'Courier New', monospace;
+    transition: bottom 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 6000;
 }
 
-/* 3. The Timer: Turns red to signal a breach/expiry */
-.vault-closed .timer-overlay {
-    background: #ff4757 !important;
-    color: white !important;
-    box-shadow: 0 0 15px rgba(255, 71, 87, 0.5);
+#secret-terminal.active {
+    bottom: 20px;
+}
+
+#terminal-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #06f80a;
+    outline: none;
+}
+
+/* Crimson Mode Override */
+body.crimson-mode {
+    background: linear-gradient(135deg, #2a0f0f 0%, #170202 100%) !important;
+}
+
+body.crimson-mode .logo,
+body.crimson-mode #terminal-input {
+    color: #ff4757 !important;
+}
+
+/* --- THE GLITCH PROTOCOL --- */
+@keyframes glitch-flicker {
+    0% {
+        opacity: 1;
+        transform: skew(0deg);
+    }
+
+    1% {
+        opacity: 0.5;
+        transform: skew(10deg);
+        color: #ff4757;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.glitch-active {
+    animation: glitch-flicker 0.2s infinite;
+}
+
+/* --- ANALYSIS PANEL (Final Integration) --- */
+#analysis-panel {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 350px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.98);
+    border-left: 2px solid #06f80a;
+    padding: 60px 25px;
+    z-index: 9999;
+    transition: right 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.9);
+}
+
+#analysis-panel.open {
+    right: 0;
+}
+
+.panel-header {
+    color: #06f80a;
+    font-family: 'Courier New', monospace;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(6, 248, 10, 0.3);
+}
+
+#analysis-content {
+    color: #ffffff;
+    line-height: 1.8;
+}
+
+/* 7. MOBILE REPAIR (Restored) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column !important;
+        padding: 15px 10px !important;
+        gap: 12px !important;
+    }
+
+    #navlist {
+        gap: 15px !important;
+        justify-content: center !important;
+    }
+
+    .book-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+
+    #analysis-panel {
+        width: 100%;
+    }
+}
+
+/* --- TRUST BAR FIX (PREMIUM VAULT STYLE) --- */
+.trust-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px auto;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.trust-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: #cfcfcf;
+    font-size: 13px;
+    backdrop-filter: blur(6px);
+    transition: 0.3s ease;
+}
+
+.trust-item:hover {
+    border-color: #06f80a;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.system-status {
+    text-align: center;
+    color: #06f80a;
+    font-size: 12px;
+    margin-top: 10px;
+    letter-spacing: 1px;
 }

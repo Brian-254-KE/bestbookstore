@@ -1,52 +1,49 @@
+// --- GLOBAL CONSTANT ---
+const PHONE = "254115477579";
+
 // --- 1. DATA VAULT (The Library) ---
 const bookData = {
   "Atomic Habits": {
     title: "Atomic Habits",
-    description: `<h3>By James Clear</h3><p>Atomic Habits is a guide to building long-term success through tiny, 1% improvements. It focuses on identity-based habits and manipulating the habit loop.</p><ul><li>1% better every day.</li><li>Forget goals, focus on systems.</li></ul>`,
+    description: `<h3>By James Clear</h3>
+    
+    <p>Atomic Habits is a guide to building long-term success through tiny improvements.</p>`,
   },
-  "The Body Keeps the Score": {
-    title: "The Body Keeps the Score",
-    description: `<h3>By Bessel van der Kolk</h3><p>This book explores how trauma physically reshapes both the brain and the body, staying trapped in the nervous system. Recovery involves helping the brain feel safe in the body again.</p>`,
+
+  "I Love You to the Moon and Back": {
+    title: "I Love You to the Moon and Back",
+    description: `<h3>..</h3>
+
+    <p>Atomic Habits is a guide to building long-term success through tiny improvements.</p>`,
   },
+
   "Rich Dad Poor Dad": {
     title: "Rich Dad Poor Dad",
-    description: `<h3>By Robert T. Kiyosaki</h3><p>Contrasts the financial philosophies of a poor educated father and a rich self-made millionaire. Focuses on assets, financial intelligence, and making money work for you.</p>`,
+    description: `<h3>By Robert Kiyosaki</h3>
+    
+    <p>Rich Dad Poor Dad is a foundational personal finance book that contrasts the financial philosophies of two men: the author's biological father (the "Poor Dad") and his best friend's father (the "Rich Dad"). It argues that the key to wealth is not a high salary, but understanding how to make money work for you.</p><br>
+    
+    <p>The book teaches a mindset of calculated risk and passive income. By focusing on building a portfolio of assets rather than just seeking a higher "paycheck," you gain the freedom to stop trading your time for money. It is about manipulating your cash flow so that your assets eventually cover your lifestyle, leaving you in total control of your time and destiny.</p>`,
   },
   "Surrounded by Idiots": {
     title: "Surrounded by Idiots",
-    description: `<h3>By Thomas Erikson</h3><p>Explains personality types using the DISA (Dominance, Inducement, Submission, Analytical) system. Categorize people by colors to communicate and manipulate more effectively.</p>`,
+    description: `<h3>By Thomas Erikson</h3><p>Understanding human behavior patterns using color types.</p>`,
   },
   "The Psychology of Money": {
     title: "The Psychology of Money",
-    description: `<h3>By Morgan Housel</h3><p>Success with money is about behavior, not math. It argues that being "reasonable" is better than being "rational" in financial planning.</p>`,
+    description: `<h3>By Morgan Housel</h3><p>Money is more about behavior than intelligence.</p>`,
   },
-  "The Smart Money Woman": {
-    title: "The Smart Money Woman",
-    description: `<h3>By Arese Ugwu</h3><p>Uses a fictional narrative to provide a toolkit for financial liberation. Focuses on the shift from being a consumer to being an owner.</p>`,
+};
+
+// --- ANALYSIS DATA ---
+const analysisData = {
+  "Atomic Habits": {
+    title: "Atomic Habits",
+    description: `<p>Focus: Behavioral Engineering. Small changes → massive results.</p>`,
   },
-  "The Secret": {
-    title: "The Secret",
-    description: `<h3>By Rhonda Byrne</h3><p>Centers on the Law of Attraction—the belief that thoughts shape reality. It encourages a creator mindset to manifest wealth and health.</p>`,
-  },
-  "The Art of Being Alone": {
-    title: "The Art of Being Alone",
-    description: `<h3>By Renuka Gavrani</h3><p>A guide to shifting from loneliness to powerful solitude. Becoming comfortable in your own presence makes you more effective and less desperate.</p>`,
-  },
-  "Think and Grow Rich": {
-    title: "Think and Grow Rich",
-    description: `<h3>By Napoleon Hill</h3><p>Based on research of 500 affluent individuals. Wealth begins with a specific state of mind and programming the subconscious for opportunity.</p>`,
-  },
-  "The Diary of a CEO": {
-    title: "The Diary of a CEO",
-    description: `<h3>By Steven Bartlett</h3><p>33 laws of business and life focusing on emotional intelligence and engineering success through high-leverage habits.</p>`,
-  },
-  "Think Like an Entrepreneur, Act Like a CEO": {
-    title: "Think Like an Entrepreneur, Act Like a CEO",
-    description: `<h3>By Beverly Jones</h3><p>Career development for the modern workplace. Treat your career as your own business to ensure you are the architect of your own value.</p>`,
-  },
-  "The Sex Lives of African Women": {
-    title: "The Sex Lives of African Women",
-    description: `<h3>By Nana Darkoa Sekyiamah</h3><p>A collection of stories exploring sexuality and desire. It acts as a tool for social engineering by normalizing discussions of female autonomy.</p>`,
+  "Surrounded by Idiots": {
+    title: "Surrounded by Idiots",
+    description: `<p>Focus: Profiling people using personality systems.</p>`,
   },
 };
 
@@ -56,6 +53,8 @@ function showAbout(bookKey) {
   const title = document.getElementById("modal-title");
   const desc = document.getElementById("modal-desc");
 
+  if (!modal || !title || !desc) return;
+
   const book = bookData[bookKey];
 
   if (book) {
@@ -63,29 +62,38 @@ function showAbout(bookKey) {
     desc.innerHTML = book.description;
   } else {
     title.innerText = bookKey;
-    desc.innerHTML =
-      "<p>Knowledge is the ultimate acquisition. Secure this manuscript to begin.</p>";
+    desc.innerHTML = "<p>Knowledge is locked. Request access to continue.</p>";
   }
 
-  modal.style.display = "block";
-  setTimeout(() => {
-    modal.classList.add("glass-open");
-  }, 10);
+  modal.style.display = "flex";
+  setTimeout(() => modal.classList.add("glass-open"), 10);
 }
 
-// --- 3. CLOSING THE LOOP ---
+// --- 3. CLOSE MODAL ---
 const closeBtn = document.querySelector(".close-btn");
 if (closeBtn) {
   closeBtn.onclick = () => {
     const modal = document.getElementById("book-modal");
+    if (!modal) return;
     modal.classList.remove("glass-open");
-    setTimeout(() => {
-      modal.style.display = "none";
-    }, 500);
+    setTimeout(() => (modal.style.display = "none"), 300);
   };
 }
 
-// --- 4. SOCIAL PROOF LOGIC ---
+// --- CLICK OUTSIDE CLOSE ---
+window.addEventListener("click", (e) => {
+  const modal = document.getElementById("book-modal");
+  if (!modal) return;
+
+  if (e.target === modal) {
+    modal.classList.remove("glass-open");
+    setTimeout(() => {
+      modal.style.display = "none";
+    }, 300);
+  }
+});
+
+// --- 4. SOCIAL PROOF ---
 const messages = [
   "3 people in Nairobi are viewing 'The Secret'",
   "Someone just acquired 'Atomic Habits'",
@@ -103,9 +111,8 @@ function triggerSocialProof() {
     text.innerText = messages[Math.floor(Math.random() * messages.length)];
     box.classList.add("show");
   }, 1000);
-  setTimeout(() => {
-    box.classList.remove("show");
-  }, 6000);
+
+  setTimeout(() => box.classList.remove("show"), 6000);
 }
 
 setTimeout(() => {
@@ -113,7 +120,7 @@ setTimeout(() => {
   setInterval(triggerSocialProof, 15000);
 }, 3000);
 
-// --- 5. MOUSE FOLLOW LOGIC ---
+// --- 5. MOUSE GLOW ---
 const glow = document.getElementById("mouse-glow");
 window.addEventListener("mousemove", (e) => {
   if (glow) {
@@ -122,115 +129,108 @@ window.addEventListener("mousemove", (e) => {
   }
 });
 
-// --- 6. THE ACQUISITION BRIDGE ---
+// --- 6. BUTTON HANDLER ---
 function setupButtons() {
   document.querySelectorAll(".book-card button").forEach((button) => {
-    button.onclick = (e) => {
-      e.stopPropagation();
-      const bookCard = e.target.closest(".book-card");
-      const bookTitle = bookCard.querySelector("h3").innerText;
+   button.onclick = (e) => {
+     e.stopPropagation();
 
-      // Your Number: 254115477579
-      const phoneNumber = "254115477579";
-      const message = `[REQUEST] I wish to Acquire Mastery of: ${bookTitle}. Please provide the decryption key for the KU Node.`;
-      window.open(
-        `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
-        "_blank",
-      );
-    };
+     const bookCard = e.target.closest(".book-card");
+     if (!bookCard) return;
+
+     const bookTitle = bookCard.querySelector("h3")?.innerText || "Unknown";
+
+     alert("Redirecting to secure access channel...");
+
+     const message = `
+📚 ACCESS REQUEST
+
+Book: ${bookTitle}
+
+Status: Pending Access Approval
+Platform: Mastery Vault System
+
+I am requesting access to this manuscript. Please confirm payment steps and release the file.
+
+User Node: Mobile Request
+`;
+
+     alert("Redirecting to secure access channel...");
+
+     window.open(
+       `https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`,
+       "_blank",
+     );
+   };
   });
 }
 setupButtons();
 
-// --- 7. THE GATEKEEPER'S FILTER ---
+// --- 7. FILTER ---
 function filterBooks(category) {
   const books = document.querySelectorAll(".book-card");
   books.forEach((book) => {
     if (category === "all" || book.classList.contains(category)) {
       book.style.display = "block";
-      setTimeout(() => {
-        book.classList.remove("hidden");
-      }, 10);
     } else {
-      book.classList.add("hidden");
-      setTimeout(() => {
-        book.style.display = "none";
-      }, 500);
+      book.style.display = "none";
     }
   });
 }
 
-// --- 8. THE MASTER SEARCH ---
+// --- 8. SEARCH ---
 function searchMastery() {
-  let input = document.getElementById("bookSearch").value.toLowerCase();
+  let input = document.getElementById("bookSearch")?.value.toLowerCase() || "";
   let cards = document.querySelectorAll(".book-card");
+
   cards.forEach((card) => {
-    let title = card.querySelector("h3").innerText.toLowerCase();
+    let title = card.querySelector("h3")?.innerText.toLowerCase() || "";
     card.style.display = title.includes(input) ? "block" : "none";
   });
 }
 
-// --- 9. THE REVEAL OBSERVER ---
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  },
-  { threshold: 0.1 },
-);
-
-document.querySelectorAll(".book-card").forEach((book) => {
-  revealObserver.observe(book);
-});
-
-// --- 10. SCROLL COMMAND ---
+// --- 9. SCROLL ---
 window.onscroll = function () {
   const btn = document.getElementById("scrollTop");
-  if (btn) {
-    if (document.documentElement.scrollTop > 500) {
-      btn.classList.add("show");
-    } else {
-      btn.classList.remove("show");
-    }
+  if (!btn) return;
+
+  if (document.documentElement.scrollTop > 500) {
+    btn.classList.add("show");
+  } else {
+    btn.classList.remove("show");
   }
 };
 
-// --- 11. RELEASE PROTOCOLS (Atomic & Elite) ---
+// --- 10. RELEASE SYSTEM ---
 function startReleaseProtocols() {
-  // Atomic Release: Set for 7 days
-  let atomicDate = new Date().getTime() + 7 * 24 * 60 * 60 * 1000;
-  // Elite Release: Set for 14 days
-  let eliteDate = new Date().getTime() + 14 * 24 * 60 * 60 * 1000;
+  let atomicDate = Date.now() + 7 * 24 * 60 * 60 * 1000;
+  let eliteDate = Date.now() + 14 * 24 * 60 * 60 * 1000;
 
-  const releaseInterval = setInterval(function () {
-    let now = new Date().getTime();
+  const interval = setInterval(() => {
+    let now = Date.now();
 
-    // Handle Atomic Habits
-    let atomicLeft = atomicDate - now;
     const atomicTimer = document.getElementById("atomic-timer");
-    if (atomicTimer && atomicLeft > 0) {
-      let d = Math.floor(atomicLeft / (1000 * 60 * 60 * 24));
-      let h = Math.floor(
-        (atomicLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
-      );
-      let m = Math.floor((atomicLeft % (1000 * 60 * 60)) / (1000 * 60));
-      atomicTimer.innerHTML = `AVAILABLE IN: ${d}d ${h}h ${m}m`;
-    } else if (atomicTimer) {
-      unlockBook("atomic-book", "atomic-button", "atomic-timer");
+    const eliteTimer = document.getElementById("elite-timer");
+
+    if (atomicTimer) {
+      let left = atomicDate - now;
+      if (left > 0) {
+        atomicTimer.innerHTML = `AVAILABLE IN: ${Math.floor(left / 86400000)}d`;
+      } else {
+        unlockBook("atomic-book", "atomic-button", "atomic-timer");
+      }
     }
 
-    // Handle Elite Vault
-    let eliteLeft = eliteDate - now;
-    const eliteTimer = document.getElementById("elite-timer");
-    if (eliteTimer && eliteLeft > 0) {
-      let d = Math.floor(eliteLeft / (1000 * 60 * 60 * 24));
-      eliteTimer.innerHTML = `DECRYPTING: ${d}d REMAINING`;
-    } else if (eliteTimer) {
-      unlockBook("elite-vault", "elite-button", "elite-timer");
+    if (eliteTimer) {
+      let left = eliteDate - now;
+      if (left > 0) {
+        eliteTimer.innerHTML = `DECRYPTING: ${Math.floor(left / 86400000)}d`;
+      } else {
+        unlockBook("elite-vault", "elite-button", "elite-timer");
+      }
     }
+
+    if (now > eliteDate) clearInterval(interval);
   }, 1000);
 }
 
@@ -239,8 +239,7 @@ function unlockBook(cardId, btnId, timerId) {
   const btn = document.getElementById(btnId);
   const timer = document.getElementById(timerId);
 
-  if (card) card.classList.remove("vault-closed", "locked-manuscript");
-  if (card) card.style.pointerEvents = "auto";
+  if (card) card.classList.remove("locked-manuscript");
   if (timer) {
     timer.innerHTML = "ACCESS GRANTED";
     timer.style.background = "#06f80a";
@@ -251,5 +250,52 @@ function unlockBook(cardId, btnId, timerId) {
   }
 }
 
-// Initialize Protocols
 startReleaseProtocols();
+
+// --- TERMINAL ---
+const terminal = document.getElementById("secret-terminal");
+const termInput = document.getElementById("terminal-input");
+const termOutput = document.getElementById("terminal-output");
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "`" && terminal) {
+    terminal.classList.toggle("active");
+    termInput?.focus();
+  }
+});
+
+// --- ANALYSIS ---
+function openAnalysis(bookTitle, customText) {
+  const panel = document.getElementById("analysis-panel");
+  const content = document.getElementById("analysis-content");
+
+  if (!panel || !content) return;
+
+  const data = analysisData[bookTitle];
+
+  if (customText) {
+    content.innerHTML = `<h3>${bookTitle}</h3><p>${customText}</p>`;
+  } else if (data) {
+    content.innerHTML = `<h3>${data.title}</h3>${data.description}`;
+  } else {
+    content.innerHTML = "<p>No analysis available.</p>";
+  }
+
+  panel.classList.add("open");
+}
+
+function closeAnalysis() {
+  document.getElementById("analysis-panel")?.classList.remove("open");
+}
+
+window.addEventListener("click", (e) => {
+  const modal = document.getElementById("book-modal");
+  if (!modal) return;
+
+  if (e.target === modal) {
+    modal.classList.remove("glass-open");
+    setTimeout(() => {
+      modal.style.display = "none";
+    }, 300);
+  }
+});
