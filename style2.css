@@ -1,3 +1,4 @@
+
 /* 1. THE ENVIRONMENT */
 * {
     margin: 0;
@@ -7,7 +8,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #0f172a 0%, #020617 100%);
+    background: radial-gradient(circle at center, #1e1e22 0%, #0d0d0e 100%);
     background-attachment: fixed;
     color: #e2e8f0;
     min-height: 100vh;
@@ -68,8 +69,15 @@ body::before {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #06f80a;
+    color: var(--gold-primary);
+    text-shadow: 0 0 15px var(--gold-glow);
     letter-spacing: 2px;
+    font-family: 'Syncopate', sans-serif;
+}
+
+.capacity-bar-fill {
+    background: linear-gradient(90deg, #d4af37, #ffffff);
+    box-shadow: 0 0 10px var(--gold-primary);
 }
 
 #navlist {
@@ -143,27 +151,77 @@ body::before {
     transition: all 0.4s ease;
 }
 
-/* 4. THE GLASS CARD & ANIMATION */
-.book-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(12px);
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    animation: floatGlow 4s ease-in-out infinite;
-    transition: all 0.4s ease;
-    cursor: pointer;
-    position: relative;
+/* --- VAULT ARCHIVE: PREMIUM GOLD ARTIFACT THEME --- */
+:root {
+    --gold-primary: #d4af37;
+    /* Engraved/Engraved gold */
+    --gold-glow: rgba(212, 175, 55, 0.4);
+    --glass-bg: rgba(20, 20, 22, 0.85);
+    /* Your smoky charcoal color */
 }
 
+/* --- UPDATED PREMIUM GOLD BORDER --- */
+.book-card {
+    background: rgba(25, 25, 28, 0.9);
+    /* Your smoky charcoal color */
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    /* This keeps the rotation strictly on the edge */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+/* This is the part that rotates - NOT the card itself */
+.book-card::before {
+    content: '';
+    position: absolute;
+    height: 150%;
+    width: 150%;
+    /* Creating a sharp gold beam */
+    background-image: conic-gradient(transparent,
+            #d4af37,
+            transparent 30%);
+    animation: goldSweep 4s linear infinite;
+    top: -25%;
+    left: -25%;
+    z-index: 1;
+}
+
+/* This creates the 'Inner Vault' that covers the center of the animation */
+.book-card::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    /* This defines the thickness of your gold border */
+    background: rgba(25, 25, 28, 1);
+    border-radius: 10px;
+    z-index: 2;
+}
+
+/* Ensures images and text sit on top of everything */
+.book-card>* {
+    position: relative;
+    z-index: 3;
+}
+
+@keyframes goldSweep {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Hover effect to stop the rotation or make it glow */
 .book-card:hover {
-    animation-play-state: paused;
-    transform: translateY(-15px) scale(1.02) !important;
-    border-color: rgba(6, 248, 10, 0.5);
-    box-shadow: 0 15px 40px rgba(6, 248, 10, 0.15), inset 0 0 20px rgba(6, 248, 10, 0.05);
-    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
 }
 
 @keyframes floatGlow {
@@ -180,25 +238,41 @@ body::before {
 }
 
 .book-card h3 {
+    color: var(--gold-primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
     margin-bottom: 15px;
-    font-size: 1.1rem;
-    height: 2.5em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    z-index: 3;
+    /* Sits above the glass layer */
 }
 
-.book-card img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    filter: grayscale(20%);
+/* Mastery Text Styling for prices/stock */
+.book-card p {
+    color: #fffdfd;
+    font-family: 'Courier New', monospace;
+    /* The high-tech node vibe */
+    font-size: 0.8rem;
+    position: relative;
+    z-index: 3;
+}
+
+.book-card:hover {
+    transform: translateY(-10px);
+    /* Keeps the premium hover lift */
+
+    /* Force brightness to remain at 100% */
+    filter: brightness(1) !important;
+    opacity: 1 !important;
+
+    /* Enhance the Gold Border Glow instead of dimming the book */
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+    border-color: #d4af37;
 }
 
 .book-card:hover img {
     transform: scale(1.08) translateY(-5px);
-    filter: grayscale(0%) brightness(1.1);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
 
@@ -244,7 +318,7 @@ body::before {
 }
 
 .modal-content {
-    background: rgba(255, 255, 255, 0.07) !important;
+    background: rgba(167, 24, 24, 0.07) !important;
     backdrop-filter: blur(25px) !important;
     margin: 10% auto;
     padding: 40px;
@@ -332,40 +406,6 @@ body::before {
     }
 }
 
-/* 8. MASTER CHOICE HIGHLIGHT */
-.book-card.highlight {
-    border: 1.5px solid #ffd700 !important;
-    box-shadow: 0 0 25px rgba(255, 215, 0, 0.3) !important;
-    animation: floatGlowGold 4s ease-in-out infinite !important;
-}
-
-@keyframes floatGlowGold {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-12px);
-        box-shadow: 0 25px 50px rgba(255, 215, 0, 0.2);
-    }
-}
-
-.book-card.highlight::before {
-    content: "MASTER RECOMMENDATION";
-    position: absolute;
-    top: 10px;
-    left: -5px;
-    background: #ffd700;
-    color: black;
-    padding: 3px 12px;
-    font-size: 0.6rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    z-index: 20;
-    transform: rotate(-3deg);
-}
 
 /* 9. MOUSE GLOW */
 #mouse-glow {
@@ -374,7 +414,7 @@ body::before {
     left: 0;
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(6, 248, 10, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(230, 246, 10, 0.15) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
     z-index: -1;
@@ -897,30 +937,71 @@ body::before {
     transition: all 0.4s ease;
 }
 
-/* 4. THE GLASS CARD & ANIMATION */
+/* --- VAULT ARCHIVE: PREMIUM GOLD THEME --- */
+
+/* Base Card Style */
 .book-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(20, 20, 22, 0.8);
+    backdrop-filter: blur(15px);
+    border: 1.5px solid rgba(212, 175, 55, 0.3);
+    /* Premium Gold Border */
+    border-radius: 12px;
     padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    animation: floatGlow 4s ease-in-out infinite;
-    transition: all 0.4s ease;
-    cursor: pointer;
+    transition: all 0.4s ease-in-out;
     position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
 }
 
-/* FIX: Interaction Logic - The "Mighty Reaction" */
+/* Hover State: Glowing Mastery */
 .book-card:hover {
-    animation-play-state: paused;
-    transform: translateY(-15px) scale(1.02) !important;
-    border-color: rgba(6, 248, 10, 0.5);
-    box-shadow: 0 15px 40px rgba(6, 248, 10, 0.15),
-        inset 0 0 20px rgba(6, 248, 10, 0.05);
-    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-10px);
+    border-color: #d4af37;
+    /* Solid Gold */
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+}
+
+/* Title Styling */
+.book-card h3 {
+    color: #d4af37;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+/* Image Placeholder for Books */
+.book-card img {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    margin-bottom: 15px;
+}
+
+/* The "Request Access Key" Button Styling */
+.book-card button {
+    width: 100%;
+    background: linear-gradient(135deg, #d4af37 0%, #f9e29c 100%);
+    color: #000;
+    font-weight: 900;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+/* The "Archive Locked" State */
+.book-card.locked-status {
+    border-color: #39ff14;
+    /* Green matching your "Active Node" */
+}
+
+.book-card.locked-status button {
+    background: #1a1a1a;
+    color: #39ff14;
+    border: 1px solid #39ff14;
 }
 
 @keyframes floatGlow {
@@ -936,14 +1017,6 @@ body::before {
     }
 }
 
-.book-card h3 {
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-    height: 2.5em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 /* Line 85: 3D Image Pop */
 .book-card img {
@@ -956,24 +1029,10 @@ body::before {
 
 .book-card:hover img {
     transform: scale(1.08) translateY(-5px);
-    filter: grayscale(0%) brightness(1.1);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* 5. BUTTONS (Restored & Working) */
-.book-card button {
-    position: relative;
-    z-index: 10;
-    background: #06f80a;
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    margin-top: 15px;
-}
+
 
 .book-card button:hover {
     background-color: #ff4757 !important;
@@ -1092,38 +1151,54 @@ body::before {
 }
 
 /* Line 185+: The Master Choice Highlight */
+/* --- THE ULTIMATE GOLD HIGHLIGHT FIX --- */
 .book-card.highlight {
-    border: 1.5px solid #ffd700 !important;
-    box-shadow: 0 0 25px rgba(255, 215, 0, 0.3) !important;
-    animation: floatGlowGold 4s ease-in-out infinite !important;
+    /* FORCE the background to stay dark so the yellow doesn't take over */
+    background: rgba(13, 13, 14, 0.98) !important;
+
+    /* Solid Premium Gold Border */
+    border: 2px solid #67f105 !important;
+
+    /* Remove any old animations that might be causing rotation */
+    animation: goldShimmer 3s ease-in-out infinite !important;
+
+    position: relative;
+    overflow: hidden;
+    z-index: 5;
 }
 
-@keyframes floatGlowGold {
+/* Ensure the "MASTER RECOMMENDATION" text doesn't get cut off */
+.book-card.highlight::before {
+    content: 'MASTER RECOMMENDATION';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #d4af37;
+    color: #000;
+    font-size: 10px;
+    font-weight: 900;
+    padding: 2px 0;
+    text-align: center;
+    z-index: 10;
+}
 
-    0%,
-    100% {
-        transform: translateY(0);
+/* This animation creates a "Breathe" effect without moving or rotating */
+@keyframes goldShimmer {
+    0% {
+        box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+        border-color: #aa8a2e;
     }
 
     50% {
-        transform: translateY(-12px);
-        box-shadow: 0 25px 50px rgba(255, 215, 0, 0.2);
+        box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+        border-color: #f9e29c;
     }
-}
 
-.book-card.highlight::before {
-    content: "MASTER RECOMMENDATION";
-    position: absolute;
-    top: 10px;
-    left: -5px;
-    background: #ffd700;
-    color: black;
-    padding: 3px 12px;
-    font-size: 0.6rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    z-index: 20;
-    transform: rotate(-3deg);
+    100% {
+        box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+        border-color: #aa8a2e;
+    }
 }
 
 /* Line 210+: Mouse Glow Styling */
@@ -1457,4 +1532,21 @@ body.crimson-mode #terminal-input {
     font-size: 12px;
     margin-top: 10px;
     letter-spacing: 1px;
+}
+
+.book-card button {
+    background: linear-gradient(135deg, #d4af37 0%, #f9e29c 100%);
+    color: #000;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: 800;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.book-card button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #d4af37;
 }

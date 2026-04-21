@@ -562,7 +562,6 @@ const bookData = {
   },
 };
 
-
 // --- ANALYSIS DATA ---
 const analysisData = {
   "Atomic Habits": {
@@ -660,17 +659,17 @@ window.addEventListener("mousemove", (e) => {
 // --- 6. BUTTON HANDLER ---
 function setupButtons() {
   document.querySelectorAll(".book-card button").forEach((button) => {
-   button.onclick = (e) => {
-     e.stopPropagation();
+    button.onclick = (e) => {
+      e.stopPropagation();
 
-     const bookCard = e.target.closest(".book-card");
-     if (!bookCard) return;
+      const bookCard = e.target.closest(".book-card");
+      if (!bookCard) return;
 
-     const bookTitle = bookCard.querySelector("h3")?.innerText || "Unknown";
+      const bookTitle = bookCard.querySelector("h3")?.innerText || "Unknown";
 
-     alert("Redirecting to secure access channel...");
+      alert("Redirecting to secure access channel...");
 
-     const message = `
+      const message = `
 📚 ACCESS REQUEST
 
 Book: ${bookTitle}
@@ -683,13 +682,13 @@ I am requesting access to this manuscript. Please confirm payment steps and rele
 User Node: Mobile Request
 `;
 
-     alert("Redirecting to secure access channel...");
+      alert("Redirecting to secure access channel...");
 
-     window.open(
-       `https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`,
-       "_blank",
-     );
-   };
+      window.open(
+        `https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`,
+        "_blank",
+      );
+    };
   });
 }
 setupButtons();
@@ -740,14 +739,6 @@ function startReleaseProtocols() {
     const atomicTimer = document.getElementById("atomic-timer");
     const eliteTimer = document.getElementById("elite-timer");
 
-    if (atomicTimer) {
-      let left = atomicDate - now;
-      if (left > 0) {
-        atomicTimer.innerHTML = `AVAILABLE IN: ${Math.floor(left / 86400000)}d`;
-      } else {
-        unlockBook("atomic-book", "atomic-button", "atomic-timer");
-      }
-    }
 
     if (eliteTimer) {
       let left = eliteDate - now;
@@ -827,3 +818,48 @@ window.addEventListener("click", (e) => {
     }, 300);
   }
 });
+
+function filterVault(category) {
+  const cards = document.querySelectorAll(".book-card");
+
+  cards.forEach((card) => {
+    card.style.opacity = "0"; // Start fade out
+    card.style.transform = "scale(0.9)";
+
+    setTimeout(() => {
+      if (category === "ALL" || card.dataset.category === category) {
+        card.style.display = "block";
+        setTimeout(() => {
+          card.style.opacity = "1";
+          card.style.transform = "scale(1)";
+        }, 50);
+      } else {
+        card.style.display = "none";
+      }
+    }, 300);
+  });
+}
+
+function renderBookCards() {
+  const container = document.getElementById("vault-grid"); // Replace with your actual container ID
+  container.innerHTML = "";
+
+  Object.keys(bookData).forEach((key) => {
+    const book = bookData[key];
+    const isLocked = book.status === "pending";
+
+    const cardHtml = `
+            <div class="book-card ${isLocked ? "locked-status" : ""}">
+                <h3>${book.title}</h3>
+                <img src="${book.image}" alt="${book.title}">
+                <p style="color: ${isLocked ? "#d4af37" : "#fff"}; font-size: 0.8rem; margin: 10px 0;">
+                    ${isLocked ? "ACCESS AUTHORIZATION PENDING" : "ONLY 4 COPIES REMAINING"}
+                </p>
+                <button onclick="showAbout('${key}')">
+                    ${isLocked ? "ARCHIVE LOCKED" : "Request Access Key (" + book.price + ")"}
+                </button>
+            </div>
+        `;
+    container.innerHTML += cardHtml;
+  });
+}
