@@ -58,13 +58,14 @@ body::before {
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background: rgba(15, 23, 42, 0.8);
+    background: #0f172acc;
     backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
     z-index: 1000;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
+}  
+
 
 .logo {
     font-size: 1.5rem;
@@ -773,6 +774,7 @@ body.crimson-mode #terminal-input {
     .navbar {
         flex-direction: column !important;
         padding: 15px 10px !important;
+        transition: transform 0.3s ease-in-out;
     }
 
     #navlist {
@@ -805,6 +807,7 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     animation: fadeInPage 1.5s ease-in-out;
+    padding-top: 70px;
 }
 
 @keyframes fadeInPage {

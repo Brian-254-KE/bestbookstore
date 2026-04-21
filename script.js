@@ -547,11 +547,11 @@ const bookData = {
     <p>Everything Is F*cked: A Book About Hope is a deep dive into the Psychology of Hope and the Irrationality of the Human Mind. While Manson's first book focused on what to "give a f*ck" about, this one explores why we feel so hopeless in a world that is technically better than ever.</p><br>`,
   },
 
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
+  "Think Big": {
+    title: "Think Big",
+    description: `<h3>By Dr. Ben Carson</h3>
     
-    <p>...</p><br>`,
+    <p>Think Big: Unleashing Your Potential for Excellence by Dr. Ben Carson is a study in Applied Perseverance and Intellectual Discipline. It is a memoir-style guide that details how a "troubled" student from Detroit transformed into a world-renowned neurosurgeon.</p><br>`,
   },
 
   "Ego Is the Enemy": {
@@ -559,6 +559,300 @@ const bookData = {
     description: `<h3>By Ryan Holiday</h3>
     
     <p>Ego Is the Enemy is a philosophical and psychological study on the Destructive Nature of the Ego. Drawing from Stoicism and historical examples, Ryan Holiday argues that ego is an internal obstacle that prevents us from learning, succeeding, and recovering from failure</p><br>`,
+  },
+
+  "The Compound Effect": {
+    title: "The Compound Effect",
+    description: `<h3>By Darren Hardy</h3>
+    
+    <p>The Compound Effect is a practical guide to the Mathematics of Success. It moves away from "get-rich-quick" schemes and focuses on the quiet power of consistency. It argues that your life is the total sum of the small, seemingly insignificant choices you make every single day.</p><br>`,
+  },
+
+  Outliers: {
+    title: "Outliers",
+    description: `<h3>By Malcolm Gladwell</h3>
+    
+    <p>Outliers: The Story of Success is a deep dive into Sociology and Achievement Psychology. Gladwell challenges the "Self-Made Man" myth, arguing that we pay too much attention to what successful people are like, and too little attention to where they are from: their culture, their family, their generation, and the idiosyncratic experiences of their upbringing.</p><br>`,
+  },
+
+  "Take the Risk": {
+    title: "Take the Risk",
+    description: `<h3>By Dr. Ben Carson</h3>
+    
+    <p>Take the Risk: Learning to Identify, Choose, and Live with Acceptable Risk, Dr. Ben Carson moves from the "Think Big" philosophy to the Calculated Execution of big ideas. As a neurosurgeon who specialized in separating conjoined twins, Carson views risk through a lens of extreme consequence, teaching readers how to move past paralyzing fear into informed action.</p><br>`,
+  },
+
+  "Nice Girls Dont Get Rich": {
+    title: "Nice Girls Dont Get Rich",
+    description: `<h3>By Lois P. Frankel, Ph.D.</h3>
+    
+    <p>Nice Girls Don't Get Rich: 75 Avoidable Mistakes Women Make with Money is a study in Financial Socialization. Dr. Frankel, a corporate coach, argues that many women are conditioned from childhood to be "nice"—which often translates to being passive, accommodating, and risk-averse. This "niceness" becomes a psychological barrier to building significant wealth.</p><br>`,
+  },
+
+  "The Art of Letting Go": {
+    title: "The Art of Letting Go",
+    description: `<h3>By Nick Trenton</h3>
+    
+    <p>The Art of Letting Go is a practical guide focused on Emotional Regulation and Cognitive Reframing. It addresses the mental "clutter" that keeps individuals trapped in the past or anxious about the future. The book functions as a roadmap for moving from a state of overthinking and attachment to one of mental peace and presence.</p><br>`,
+  },
+
+  "Waiting and Dating": {
+    title: "Waiting and Dating",
+    description: `<h3>By Dr. Myles Munroe</h3>
+    
+    <p>Waiting and Dating: A Sensible Guide to a Fulfilling Relationship is a study in Relational Foundation and Self-Actualization. Dr. Munroe challenges the modern "recreational dating" culture, arguing that successful relationships are built on individual wholeness rather than a search for someone to "complete" you.</p><br>`,
+  },
+
+  "The 15 Commitments of Conscious Leadership": {
+    title: "The 15 Commitments of Conscious Leadership",
+    description: `<h3>By Jim Dethmer, Diana Chapman, and Kaley Klemp</h3>
+    
+    <p>The 15 Commitments of Conscious Leadership is a transformative guide focused on Self-Awareness and Emotional Intelligence. It introduces a radical shift from "unconscious" leading (driven by fear and reactivity) to "conscious" leading (driven by curiosity and responsibility). It is built around a central, binary question: "Are you above or below the line?"</p><br>`,
+  },
+
+  "Gifted Hands": {
+    title: "Gifted Hands",
+    description: `<h3>By Dr. Ben Carson (with Cecil Murphey)</h3>
+    
+    <p>Gifted Hands is the autobiography of Dr. Ben Carson, detailing his journey from a "class dummy" in inner-city Detroit to the Director of Pediatric Neurosurgery at Johns Hopkins Hospital. It is a fundamental study in Developmental Transformation and the power of Intellectual Discipline.</p><br>`,
+  },
+
+  "How to Lead When You are Not in Charge": {
+    title: "How to Lead When You are Not in Charge",
+    description: `<h3>By Clay Scroggins</h3>
+    
+    <p>ow to Lead When You're Not in Charge is a masterclass in Personal Agency and Organizational Influence. It directly challenges the "Authority Fallacy"—the belief that you need a title or a corner office to make a difference. Scroggins argues that leadership is not about control; it is about influence, and influence is earned through character and posture.</p><br>`,
+  },
+
+  "The Mountain Is You": {
+    title: "The Mountain Is You",
+    description: `<h3>By Brianna Wiest</h3>
+    
+    <p>The Mountain Is You: Transforming Self-Sabotage Into Self-Mastery is a profound study in Internal Resistance. Wiest argues that the "mountain" standing in your way is not an external obstacle, but the internal collection of traumas, fears, and habits that cause you to get in your own way. To "climb the mountain" is to do the deep inner work of excavating the self.</p><br>`,
+  },
+
+  "Leaders Eat Last": {
+    title: "Leaders Eat Last",
+    description: `<h3>By Simon Sinek</h3>
+    
+    <p>Leaders Eat Last: Why Some Teams Pull Together and Others Don’t is a study in Evolutionary Biology and Group Dynamics. Sinek argues that the best organizations aren't those with the smartest people, but those with the highest level of Psychological Safety. The title comes from a Marine Corps tradition where senior officers eat only after the junior enlisted have been fed—symbolizing that a leader’s primary duty is to protect the tribe.</p><br>`,
+  },
+
+  Mindset: {
+    title: "Mindset",
+    description: `<h3>By Dr. Carol S. Dweck</h>
+    
+    <p>Mindset: The New Psychology of Success is one of the most influential works in modern behavioral science. Dr. Dweck, a Stanford psychologist, spent decades researching how our beliefs about our own abilities—our "mindset"—determine our entire life path. It is the definitive study on Cognitive Orientation</p><br>`,
+  },
+
+  "Win Your Inner Battles": {
+    title: "Win Your Inner Battles",
+    description: `<h3>By Darius Foroux</h3>
+    
+    <p>Win Your Inner Battles: Defeat Fear and Become the Master of Your Life is a pragmatic guide to Cognitive Mastery. Foroux argues that most people are held back not by external circumstances, but by an internal state of fear and overthinking. The book provides a three-step framework—Perception, Strategy, and Action—to dismantle these mental barriers.</p><br>`,
+  },
+
+  "Hi God, It is Me Again": {
+    title: "Hi God, It is Me Again",
+    description: `<h3>By Dr. Ben Carson</h3>
+    
+    <p>While many of Ben Carson's other works focus on the "how-to" of neurosurgery or academic success, Hi God, It's Me Again (also released under titles like Spend Your Life Like It’s Your Only One) is a study in Existential Meaning and Spiritual Resilience. It explores how a personal connection with a higher power provides the psychological stability needed to perform under extreme pressure.</p><br>`,
+  },
+
+  "The Let Them Theory": {
+    title: "The Let Them Theory",
+    description: `<h3>By Mel Robbins</h3>
+    
+    <p>The "Let Them" Theory is a psychological framework designed to reduce emotional distress by relinquishing the need to control others. It operates on the principle of Radical Acceptance, allowing you to move from a reactive state to an observant one. By "letting them" act freely, you stop wasting mental energy on things outside your control and gain clear data on who people truly are.</p><br>`,
+  },
+
+  "The Lean Startup": {
+    title: "The Lean Startup",
+    description: `<h3>By Eric Ries</h3>
+    
+    <p>The Lean Startup is more than a business book; it is a Mindset framework for handling uncertainty. It applies the scientific method to human creativity, ensuring that you don't waste years building something that nobody wants. It shifts the focus from "efficiency" to "Validated Learning."</p><br>`,
+  },
+
+  Verity: {
+    title: "Verity",
+    description: `<h3>By Colleen Hoover</h3>
+    
+    <p>Verity is a departure from traditional romance, leaning heavily into Psychological Manipulation and the blurring of truth and fiction. It explores the darker side of the human psyche, specifically how trauma and obsession can distort a person's reality.</p><br>`,
+  },
+
+  "...": {
+    title: "...",
+    description: `<h3>By </h3>
+    
+    <p>...</p><br>`,
+  },
+
+  "...": {
+    title: "...",
+    description: `<h3>By </h3>
+    
+    <p>...</p><br>`,
+  },
+
+  "...": {
+    title: "...",
+    description: `<h3>By </h3>
+    
+    <p>...</p><br>`,
+  },
+
+  "...": {
+    title: "...",
+    description: `<h3>By </h3>
+    
+    <p>...</p><br>`,
+  },
+
+  "...": {
+    title: "...",
+    description: `<h3>By </h3>
+    
+    <p>...</p><br>`,
+  },
+
+  "...": {
+    title: "...",
+    description: `<h3>By </h3>
+    
+    <p>...</p><br>`,
+  },
+
+  "...": {
+    title: "...",
+    description: `<h3>By </h3>
+    
+    <p>...</p><br>`,
+  },
+
+  "...": {
+    title: "...",
+    description: `<h3>By </h3>
+    
+    <p>...</p><br>`,
+  },
+
+  "...": {
+    title: "...",
+    description: `<h3>By </h3>
+    
+    <p>...</p><br>`,
+  },
+
+  "...": {
+    title: "...",
+    description: `<h3>By </h3>
+    
+    <p>...</p><br>`,
+  },
+
+  "...": {
+    title: "...",
+    description: `<h3>By </h3>
+    
+    <p>...</p><br>`,
+  },
+
+  "...": {
+    title: "...",
+    description: `<h3>By </h3>
+    
+    <p>...</p><br>`,
+  },
+
+  "...": {
+    title: "...",
+    description: `<h3>By </h3>
+    
+    <p>...</p><br>`,
+  },
+
+  "...": {
+    title: "...",
+    description: `<h3>By </h3>
+    
+    <p>...</p><br>`,
+  },
+
+  "...": {
+    title: "...",
+    description: `<h3>By </h3>
+    
+    <p>...</p><br>`,
+  },
+
+  "...": {
+    title: "...",
+    description: `<h3>By </h3>
+    
+    <p>...</p><br>`,
+  },
+
+  "...": {
+    title: "...",
+    description: `<h3>By </h3>
+    
+    <p>...</p><br>`,
+  },
+
+  "...": {
+    title: "...",
+    description: `<h3>By </h3>
+    
+    <p>...</p><br>`,
+  },
+
+  "...": {
+    title: "...",
+    description: `<h3>By </h3>
+    
+    <p>...</p><br>`,
+  },
+
+  "...": {
+    title: "...",
+    description: `<h3>By </h3>
+    
+    <p>...</p><br>`,
+  },
+
+  "...": {
+    title: "...",
+    description: `<h3>By </h3>
+    
+    <p>...</p><br>`,
+  },
+
+  "...": {
+    title: "...",
+    description: `<h3>By </h3>
+    
+    <p>...</p><br>`,
+  },
+
+  "...": {
+    title: "...",
+    description: `<h3>By </h3>
+    
+    <p>...</p><br>`,
+  },
+
+  "...": {
+    title: "...",
+    description: `<h3>By </h3>
+    
+    <p>...</p><br>`,
+  },
+
+  "...": {
+    title: "...",
+    description: `<h3>By </h3>
+    
+    <p>...</p><br>`,
   },
 };
 
@@ -739,7 +1033,6 @@ function startReleaseProtocols() {
     const atomicTimer = document.getElementById("atomic-timer");
     const eliteTimer = document.getElementById("elite-timer");
 
-
     if (eliteTimer) {
       let left = eliteDate - now;
       if (left > 0) {
@@ -863,3 +1156,29 @@ function renderBookCards() {
     container.innerHTML += cardHtml;
   });
 }
+
+let lastScrollY = window.scrollY;
+const navbar = document.querySelector("header");
+const threshold = 5; // Minimum scroll amount before navbar reacts
+
+window.addEventListener("scroll", () => {
+  const currentScrollY = window.scrollY;
+
+  // Prevent the navbar from flickering at the very top of the page
+  if (currentScrollY <= 0) {
+    navbar.classList.remove("nav-hidden");
+    return;
+  }
+
+  // Only trigger if the user scrolls more than the threshold
+  if (Math.abs(currentScrollY - lastScrollY) > threshold) {
+    if (currentScrollY > lastScrollY) {
+      // Scrolling Down
+      navbar.classList.add("nav-hidden");
+    } else {
+      // Scrolling Up
+      navbar.classList.remove("nav-hidden");
+    }
+  }
+  lastScrollY = currentScrollY;
+});
