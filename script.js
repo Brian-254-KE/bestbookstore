@@ -463,11 +463,88 @@ const bookData = {
     <p>The Daily Stoic offers 366 days of Stoic insights and exercises, featuring all-new translations from Emperor Marcus Aurelius, the playwright Seneca, and slave-turned-philosopher Epictetus. It is designed as a Practical Philosophy Field Guide for developing mental toughness and clarity.</p><br>`,
   },
 
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
+  "Good to Great": {
+    title: "Good to Great",
+    description: `<h3>By Jim Collins</h3>
     
-    <p>...</p><br>`,
+    <p>Good to Great is a definitive study on Management Psychology and Organizational Longevity. Based on five years of research, Jim Collins and his team identified a set of companies that made the leap from "good" results to "great" results (and stayed there for at least 15 years), comparing them against a control group that failed to make the leap.</p><br>`,
+  },
+
+  "Dare to Lead": {
+    title: "Dare to Lead",
+    description: `<h3>By Brené Brown</h3>
+    
+    <p>Dare to Lead is a research-based exploration of Vulnerability, Courage, and Emotional Intelligence. Brené Brown spent years studying leaders across various industries—from tech startups to the military—to understand why some cultures thrive while others remain stuck in "armored" leadership.</p><br>`,
+  },
+
+  "No Excuses": {
+    title: "No Excuses",
+    description: `<h3>By Brian Tracy</h3>
+    
+    <p>No Excuses!: The Power of Self-Discipline is a manual for Personal Accountability and Behavioral Modification. Brian Tracy argues that self-discipline is the "master key" that unlocks all other doors to success, whether in your personal life, your finances, or your career.</p><br>`,
+  },
+
+  "Solving Single": {
+    title: "Solving Single",
+    description: `<h3>By G.L. Lambert</h3>
+    
+    <p>Solving Single is an aggressive, no-nonsense dive into the Psychology of Modern Dating and Self-Worth. It is written from a perspective of extreme realism, stripping away the romanticized "fairytale" narratives to look at how social value, leverage, and human behavior dictate relationship outcomes.</p><br>`,
+  },
+
+  Range: {
+    title: "Range",
+    description: `<h3>By David Epstein</h3>
+    
+    <p>Range: Why Generalists Triumph in a Specialized World is a deep dive into Learning Theory and Cognitive Flexibility. It challenges the popular "10,000-hour rule" by arguing that while early specialization might work for "kind" learning environments (like chess or golf), "wicked" environments (like business, science, or art) favor those who start broad and embrace a variety of experiences.</p><br>`,
+  },
+
+  "Blue Ocean Strategy": {
+    title: "Blue Ocean Strategy",
+    description: `<h3>By W. Chan Kim & Renée Mauborgn</h3>
+    
+    <p>Blue Ocean Strategy is a landmark work in Strategic Management and Innovation Psychology. It argues that lasting success comes not from battling competitors in crowded "Red Oceans"—where profit margins are slashed by cutthroat rivalry—but from creating "Blue Oceans" of uncontested market space.</p><br>`,
+  },
+
+  "Market Wizards": {
+    title: "Market Wizards",
+    description: `<h3>By Jack D. Schwager</h3>
+    
+    <p>Market Wizards is a collection of interviews with some of the most successful traders of our time. Rather than providing a single "magic formula," it functions as a Comparative Study in High-Performance Psychology. It reveals that while their technical strategies (trend following, arbitrage, macro) vary wildly, their psychological profiles are nearly identical.</p><br>`,
+  },
+
+  "The Kite Runner": {
+    title: "The Kite Runner",
+    description: `<h3>By Khaled Hosseini</h3>
+    
+    <p>The Kite Runner is a hauntingly beautiful story set against the backdrop of a changing Afghanistan. While it is a work of fiction, it serves as a profound Psychological Study on Guilt, Redemption, and the Father-Son Dynamic. It follows Amir, a young boy from Kabul, as he navigates a life-altering act of cowardice and his lifelong quest for atonement.</p><br>`,
+  },
+
+  "Psycho-Cybernetics": {
+    title: "Psycho-Cybernetics",
+    description: `<h3>By Maxwell Maltz</h3>
+    
+    <p>Psycho-Cybernetics is widely considered the foundation of the modern self-help movement. Written by a plastic surgeon, it explores the Psychology of the Self-Image and how our internal "blueprint" dictates our external results more than our actual talent or circumstances.</p><br>`,
+  },
+
+  "The Magic of Thinking Big": {
+    title: "The Magic of Thinking Big",
+    description: `<h3>By David J. Schwartz</h3>
+    
+    <p>The Magic of Thinking Big is a classic text on Applied Psychology and Aspirational Goal Setting. It argues that the size of your success is determined by the size of your belief. It focuses on shifting from a "survival" mindset to an "abundance" mindset by changing the language and mental pictures you use daily.</p><br>`,
+  },
+
+  "Start With Why": {
+    title: "Start With Why",
+    description: `<h3>By Simon Sinek</h3>
+    
+    <p>Start With Why is a foundational text on Inspirational Leadership and Organizational Purpose. It explores the "Golden Circle" framework, arguing that while most people and companies know what they do and how they do it, only the truly successful ones start with why they do it.</p><br>`,
+  },
+
+  "Everything Is F*cked": {
+    title: "Everything Is F*cked",
+    description: `<h3>By Mark Manson</h3>
+    
+    <p>Everything Is F*cked: A Book About Hope is a deep dive into the Psychology of Hope and the Irrationality of the Human Mind. While Manson's first book focused on what to "give a f*ck" about, this one explores why we feel so hopeless in a world that is technically better than ever.</p><br>`,
   },
 
   "...": {
@@ -477,88 +554,11 @@ const bookData = {
     <p>...</p><br>`,
   },
 
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
+  "Ego Is the Enemy": {
+    title: "Ego Is the Enemy",
+    description: `<h3>By Ryan Holiday</h3>
     
-    <p>...</p><br>`,
-  },
-
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
-    
-    <p>...</p><br>`,
-  },
-
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
-    
-    <p>...</p><br>`,
-  },
-
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
-    
-    <p>...</p><br>`,
-  },
-
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
-    
-    <p>...</p><br>`,
-  },
-
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
-    
-    <p>...</p><br>`,
-  },
-
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
-    
-    <p>...</p><br>`,
-  },
-
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
-    
-    <p>...</p><br>`,
-  },
-
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
-    
-    <p>...</p><br>`,
-  },
-
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
-    
-    <p>...</p><br>`,
-  },
-
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
-    
-    <p>...</p><br>`,
-  },
-
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
-    
-    <p>...</p><br>`,
+    <p>Ego Is the Enemy is a philosophical and psychological study on the Destructive Nature of the Ego. Drawing from Stoicism and historical examples, Ryan Holiday argues that ego is an internal obstacle that prevents us from learning, succeeding, and recovering from failure</p><br>`,
   },
 };
 
