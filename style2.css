@@ -1553,3 +1553,50 @@ body.crimson-mode #terminal-input {
     transform: scale(1.05);
     box-shadow: 0 0 20px #d4af37;
 }
+
+.scarcity-text {
+    font-family: 'Courier New', monospace;
+    color: #39ff14;
+    /* Matrix Green */
+    font-size: 11px;
+    letter-spacing: 1px;
+    animation: flicker 3s infinite;
+}
+
+@keyframes flicker {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    52% {
+        opacity: 1;
+    }
+}
+
+.whatsapp-style {
+    display: block;
+    text-decoration: none;
+    /* Removes the link underline */
+    background: linear-gradient(145deg, #d4af37, #b8860b);
+    color: #000 !important;
+    text-align: center;
+    padding: 14px;
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-style:hover {
+    background: #f9e29c;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}

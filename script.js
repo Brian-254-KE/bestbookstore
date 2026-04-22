@@ -1,6 +1,3 @@
-// --- GLOBAL CONSTANT ---
-const PHONE = "254115477579";
-
 // --- 1. DATA VAULT (The Library) ---
 const bookData = {
   "Atomic Habits": {
@@ -680,172 +677,242 @@ const bookData = {
     <p>Verity is a departure from traditional romance, leaning heavily into Psychological Manipulation and the blurring of truth and fiction. It explores the darker side of the human psyche, specifically how trauma and obsession can distort a person's reality.</p><br>`,
   },
 
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
+  "Maybe Now": {
+    title: "Maybe Now",
+    description: `<h3>By Colleen Hoover</h3>
     
-    <p>...</p><br>`,
+    <p>Maybe Now is the follow-up to Maybe Someday. It provides a narrative look at Relational Intelligence. It follows the complex emotional lives of Ridge, Sydney, and Maggie as they navigate the aftermath of difficult choices, focusing on how characters handle the "gray areas" of loyalty and love.</p><br>`,
   },
 
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
+  "The Alchemist": {
+    title: "The Alchemist",
+    description: `<h3>By Paulo Coelho</h3>
     
-    <p>...</p><br>`,
+    <p>The Alchemist is a global phenomenon and a foundational story about finding one's purpose. It is essentially an allegory for the Growth Mindset. It follows a shepherd boy named Santiago on his journey to find a treasure hidden near the Egyptian pyramids, but the true story is about his internal psychological transformation.</p><br>`,
   },
 
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
+  "Profit First": {
+    title: "Profit First",
+    description: `<h3>By Mike Michalowicz</h3>
     
-    <p>...</p><br>`,
+    <p>Profit First transforms the way business owners and individuals think about financial management. By applying Behavioral Psychology to accounting, it forces a shift from "spending what you have" to "protecting what you earn." It is designed to turn a business into a money-making machine that serves the owner, rather than the owner serving the business.</p><br>`,
   },
 
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
+  "Black Girls Must Die Exhausted": {
+    title: "Black Girls Must Die Exhausted",
+    description: `<h3>By Jayne Allen</h3>
     
-    <p>...</p><br>`,
+    <p>Black Girls Must Die Exhausted is a contemporary story that functions as a narrative exploration of Sociology and Intersectional Psychology. It follows Tabitha Walker, a successful woman who seems to "have it all" until a medical diagnosis and workplace pressures force her to confront the "Strong Black Woman" archetype—a mindset that often leads to burnout and emotional suppression.</p><br>`,
   },
 
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
+  "Believe It to Achieve It": {
+    title: "Believe It to Achieve It",
+    description: `<h3>By Brian Tracy & Christina Stein</h3>
     
-    <p>...</p><br>`,
+    <p>Believe It to Achieve It is a guide to overcoming negative thought patterns and unlocking your full potential. It focuses on the Psychology of Self-Limiting Beliefs, arguing that your internal "mental software" is the primary factor determining your external success. It’s about rewriting your personal narrative to align with your highest goals.</p><br>`,
   },
 
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
+  "The Art of Spending Money": {
+    title: "The Art of Spending Money",
+    description: `<h3>By Morgan Housel</h3>
     
-    <p>...</p><br>`,
+    <p>The Art of Spending Money is a study in Behavioral Finance that focuses on the often-ignored side of the wealth equation. While most books teach you how to make money, Housel explores the psychological skill of using it. He argues that spending is not a science with a single right answer, but an art that must be aligned with your personal values and Mindset.</p><br>`,
   },
 
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
+  "Understanding the Power and Purpose of Woman": {
+    title: "Understanding the Power and Purpose of Woman",
+    description: `<h3>By Dr. Myles Munroe</h3>
     
-    <p>...</p><br>`,
+    <p>Understanding the Power and Purpose of Woman is a study in Ontology and Relational Leadership. Dr. Munroe argues that "when purpose is not known, abuse is inevitable." The book is designed to strip away cultural stereotypes and return to the original design and "Operating System" of women, emphasizing that they are not a "second-tier" creation but a sophisticated and necessary component of the human experience.</p><br>`,
   },
 
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
+  "His Only Wife": {
+    title: "His Only Wife",
+    description: `<h3>By Peace Adzo Medie</h3>
     
-    <p>...</p><br>`,
+    <p>His Only Wife is a modern narrative set in Ghana that functions as a study of Social Contracts and Personal Agency. It follows Afi Tekple, a young seamstress who enters an arranged marriage to a wealthy man she barely knows. The story tracks her transformation from a "passive participant" in her own life to a woman who defines her own Identity and boundaries.</p><br>`,
   },
 
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
+  "The 12 Week Year": {
+    title: "The 12 Week Year",
+    description: `<h3>By Brian P. Moran & Michael Lennington</h3>
     
-    <p>...</p><br>`,
+    <p>The 12 Week Year is a Mindset shift designed to eliminate the "annualized thinking" that leads to procrastination. By redefining a "year" as 12 weeks, it creates a psychological sense of urgency and focus. It is a study in Execution Science, moving from a state of "knowing" to a state of "doing."</p><br>`,
   },
 
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
+  "Tough Times Never Last but Tough People Do": {
+    title: "Tough Times Never Last but Tough People Do",
+    description: `<h3>By Robert H. Schuller</h3>
     
-    <p>...</p><br>`,
+    <p>Tough Times Never Last but Tough People Do is a classic study in Psychological Resilience and Possibility Thinking. It teaches that while problems are inevitable, they are also temporary. The book focuses on how to develop a "tough" mental framework that can withstand external pressures, shifting from a victim mindset to a victor mindset</p><br>`,
   },
 
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
+  "The Power of Habit": {
+    title: "The Power of Habit",
+    description: `<h3>By Charles Duhigg</h3>
     
-    <p>...</p><br>`,
+    <p>The Power of Habit is a deep dive into the Psychology and Neurology of why habits exist in the first place. Duhigg explores how habits function within individuals, successful companies, and social movements, showing that the brain is constantly looking for ways to save effort by turning routines into automatic behaviors.</p><br>`,
   },
 
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
+  Attached: {
+    title: "Attached",
+    description: `<h3>By Amir Levine & Rachel Heller</h3>
     
-    <p>...</p><br>`,
+    <p>Attached is the definitive guide to Attachment Theory, a field of psychology that explains how our early childhood experiences with caregivers create a "blueprint" for how we behave in adult relationships. It argues that humans have a biological need for connection, and understanding your specific attachment style is the key to mental peace and successful partnership.</p><br>`,
   },
 
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
+  "The Power of Vision": {
+    title: "The Power of Vision",
+    description: `<h3>By The Power of Vision</h3>
     
-    <p>...</p><br>`,
+    <p>The Power of Vision is a foundational book on Purpose-Driven Strategy. Dr. Munroe explains that "sight is a function of the eyes, but vision is a function of the heart." The book argues that vision is the source of discipline, providing the mental blueprint necessary to transform your current reality into a desired future.</p><br>`,
   },
 
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
+  "The Rules of Wealth": {
+    title: "The Rules of Wealth",
+    description: `<h3>By Richard Templar</h3>
     
-    <p>...</p><br>`,
+    <p>The Rules of Wealth is a set of guiding principles designed to rewire your Psychology regarding money. Templar argues that wealth is a result of a specific Mindset and a series of behaviors that anyone can adopt. It moves away from "get-rich-quick" schemes and focuses on the long-term discipline required to build and maintain financial independence.</p><br>`,
   },
 
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
+  "The Secret Lives of Baba Segis Wives": {
+    title: "The Secret Lives of Baba Segis Wives",
+    description: `<h3>By Lola Shoneyin</h3>
     
-    <p>...</p><br>`,
+    <p>The Secret Lives of Baba Segi's Wives is a sharp, satirical work of contemporary African literature. It functions as a complex study of Power Dynamics, Social Survival, and the lengths people will go to protect their position within a hierarchy. Set in a polygamous household in Nigeria, the story unspools when the fourth wife, Bolanle, joins the family, inadvertently threatening the carefully constructed lies that hold the household together.</p><br>`,
   },
 
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
+  "The Biblical Road to Financial Freedom": {
+    title: "The Biblical Road to Financial Freedom",
+    description: `<h3>By Mary Hunt</h3>
     
-    <p>...</p><br>`,
+    <p>The Biblical Road to Financial Freedom merges Biblical Ethics with practical Financial Literacy. It focuses on the psychological and spiritual liberation that comes from debt-free living. Mary Hunt argues that financial health is not about the amount of money you have, but about the Stewardship and integrity with which you manage it. It’s a guide to moving from "financial bondage" to a state of peace and autonomy.</p><br>`,
   },
 
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
+  "The Girl with the Louding Voice": {
+    title: "The Girl with the Louding Voice",
+    description: `<h3>By Abi Daré</h3>
     
-    <p>...</p><br>`,
+    <p>The Girl with the Louding Voice is a powerful, inspiring story that serves as a narrative exploration of Resilience and Self-Advocacy. It follows Adunni, a 14-year-old Nigerian girl who is sold into marriage and then domestic servitude. Despite every attempt to silence her, she remains committed to getting an education and finding her "louding voice"—the ability to speak up for herself and her future.</p><br>`,
   },
 
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
+  Grit: {
+    title: "Grit",
+    description: `<h3>By Angela Duckworth</h3>
     
-    <p>...</p><br>`,
+    <p>Grit is a groundbreaking study in Success Psychology. Duckworth argues that the secret to outstanding achievement is not talent, but a special blend of passion and persistence she calls "grit." This book provides the scientific evidence that your "Operating System"—specifically your ability to maintain effort over years—is a better predictor of your future Wealth and success than your IQ or initial skill level.</p><br>`,
   },
 
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
+  "Sell or Be Sold": {
+    title: "Sell or Be Sold",
+    description: `<h3>By Grant Cardone</h3>
     
-    <p>...</p><br>`,
+    <p>Sell or Be Sold is built on the premise that everything in life is a "sale." Whether you are interviewing for a job, asking for a raise, or convincing yourself to study Python, you are in the business of selling. Cardone argues that your ability to persuade and influence is the single most important skill for achieving Wealth and success. It is a study in High-Stakes Persuasion and taking total ownership of your outcomes.</p><br>`,
   },
 
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
+  "The Power of a Praying Wife": {
+    title: "The Power of a Praying Wife",
+    description: `<h3>By Stormie Omartian</h3>
     
-    <p>...</p><br>`,
+    <p>The Power of a Praying Wife is a study in Relational Responsibility and the psychological shift from "Control" to "Influence." Omartian argues that a wife’s most effective tool is not nagging, arguing, or manipulation, but a quiet, persistent focus on the spiritual and emotional well-being of her husband. It is about releasing the burden of "fixing" another person and instead focusing on one's own internal peace and divine partnership.</p><br>`,
   },
 
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
+  "The Mom Test": {
+    title: "The Mom Test",
+    description: `<h3>By Rob Fitzpatrick</h3>
     
-    <p>...</p><br>`,
+    <p>The Mom Test is a practical guide to Customer Discovery and communication. The premise is that everyone is lying to you—not because they are mean, but because they want to be "nice" and encouraging (especially your mom). This book provides a set of rules for talking to people about your business or project ideas in a way that yields the "Psychological Truth" rather than useless compliments.</p><br>`,
   },
 
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
+  "The 16 Undeniable Laws": {
+    title: "The 16 Undeniable Laws",
+    description: `<h3>By John C. Maxwell</h3>
     
-    <p>...</p><br>`,
+    <p>The 16 Undeniable Laws of Communication is a masterclass in Interpersonal Psychology. Maxwell moves beyond the mechanics of public speaking and focuses on the heart of human connection. He argues that "connecting" is a skill that can be learned, and that your ability to communicate effectively is the "Multiplier" for your talent, your Wealth, and your Personal Legend.</p><br>`,
   },
 
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
+  "The Power of Character in Leadership": {
+    title: "The Power of Character in Leadership",
+    description: `<h3>By Dr. Myles Munroe</h3>
     
-    <p>...</p><br>`,
+    <p>The Power of Character in Leadership is a deep dive into the Ontology of Integrity. Dr. Munroe argues that while "giftedness" (talent, technical skill, or IQ) can take you to the top, only "character" can keep you there. It is a study in Self-Governance, proposing that the greatest leadership challenge is not leading others, but leading oneself.</p><br>`,
   },
 
-  "...": {
-    title: "...",
-    description: `<h3>By </h3>
+  "We are Going to Need More Wine": {
+    title: "We are Going to Need More Wine",
+    description: `<h3>By Gabrielle Union</h3>
     
-    <p>...</p><br>`,
+    <p>We're Going to Need More Wine is a collection of powerful, raw essays that serve as a study in Radical Authenticity and Courageous Vulnerability. Gabrielle Union uses her personal stories—ranging from career struggles to trauma and family dynamics—to facilitate a "conversation" about the complexities of being a Black woman in modern society. The title suggests the need for a "brave space" where people can sit down and speak the unvarnished truth.</p><br>`,
+  },
+
+  "$100M Offers": {
+    title: "$100M Offers",
+    description: `<h3>By Alex Hormozi</h3>
+    
+    <p>$100M Offers is a technical manual for Value Creation. Hormozi argues that most businesses fail because they have a "commodity" offer (competing on price) rather than a "Grand Slam Offer" (making an offer so good that people feel stupid saying no). It is a study in Behavioral Economics and how to use the "Operating System" of human desire to build a profitable business.</p><br>`,
+  },
+
+  "The Spirit of Leadership": {
+    title: "The Spirit of Leadership",
+    description: `<h3>By Dr. Myles Munroe</h3>
+    
+    <p>The Spirit of Leadership is a deep dive into the Psychology of Self-Conception. Dr. Munroe’s core thesis is that leadership is not a "technique" you learn, but an "attitude" you discover. He argues that every human was created to lead in a specific area, and the "spirit" of leadership is the internal mindset that believes in one's own inherent authority and purpose.</p><br>`,
+  },
+
+  "The Defining Decade": {
+    title: "The Defining Decade",
+    description: `<h3>By Dr. Meg Jay</h3>
+    
+    <p>The Defining Decade is a foundational study in Developmental Psychology. Dr. Meg Jay argues against the popular "Below the Line" cultural myth that your 20s are a "throwaway decade" or a "delayed adolescence." Instead, she provides evidence that 80% of life’s most defining moments take place by age 35. For a first-year university student, this is a manual for high-stakes Identity Capital building.</p><br>`,
+  },
+
+  "The 21 Irrefutable Laws of Leadership": {
+    title: "The 21 Irrefutable Laws of Leadership",
+    description: `<h3>By John C. Maxwell</h3>
+    
+    <p>The 21 Irrefutable Laws of Leadership is the definitive "Technical Manual" for Social Intelligence and Influence. Maxwell argues that leadership is not a birthright but a collection of observable, learnable laws. If you follow them, people will follow you. It provides a structured Operating System for anyone looking to lead in business, academics, or community.</p><br>`,
+  },
+
+  "He Came to Set the Captives Free": {
+    title: "He Came to Set the Captives Free",
+    description: `<h3>By Dr. Rebecca Brown</h3>
+    
+    <p>He Came to Set the Captives Free is a controversial and intense exploration of Spiritual Warfare and the Psychology of Belief. Written from the perspective of a medical doctor, the book details her experiences dealing with the occult and the "liberation" of those she believes were spiritually imprisoned. It is a study in Extreme Persuasion, the battle for the Mindset, and the ethics of intervention.</p><br>`,
+  },
+
+  "The 7 Habits of Highly Effective People": {
+    title: "The 7 Habits of Highly Effective People",
+    description: `<h3>By Stephen R. Covey</h3>
+    
+    <p>The 7 Habits of Highly Effective People is the ultimate blueprint for Personal Leadership. Covey argues that true success is built on "Character Ethics" rather than "Personality Ethics" (shortcuts or image-building). This book provides a step-by-step pathway to move from Dependence to Independence, and finally to Interdependence.</p><br>`,
+  },
+
+  "The Richest Man in Babylon": {
+    title: "The Richest Man in Babylon",
+    description: `<h3>By George S. Clason</h3>
+    
+    <p>The Richest Man in Babylon is a classic collection of parables set in ancient Babylon, the wealthiest city of its time. It simplifies the "Operating System" of money into timeless laws. It is a study in Behavioral Discipline and the foundational principles of Stewardship, making it the perfect historical companion to modern books like $100M Offers or The Rules of Wealth.</p><br>`,
+  },
+
+  "Unbroken Curses": {
+    title: "Unbroken Curses",
+    description: `<h3>By Dr. Rebecca Brown & Daniel Yoder</h3>
+    
+    <p>Unbroken Curses serves as the strategic follow-up to He Came to Set the Captives Free. It moves from the "theory" of spiritual struggle into a "technical manual" for identifying and removing hidden barriers to progress. In a psychological context, it explores the Transgenerational Transmission of Trauma and the idea that inherited behaviors or "cycles" can act as internal chains.</p><br>`,
+  },
+
+  "Eat That Frog": {
+    title: "Eat That Frog",
+    description: `<h3>By Brian Tracy</h3>
+    
+    <p>Eat That Frog! is a study in Decision Architecture and Cognitive Efficiency. The title is based on an old saying: if the first thing you do each morning is eat a live frog, you can go through the day with the satisfaction of knowing that that is probably the worst thing that is going to happen to you all day. In the world of Wealth and Software Engineering, your "frog" is your biggest, most important task—the one you are most likely to procrastinate on.</p><br>`,
+  },
+
+  "Kiss That Frog!": {
+    title: "Kiss That Frog!",
+    description: `<h3>By Brian Tracy & Christina Tracy Stein</h3>
+    
+    <p>If Eat That Frog! is about Productivity, Kiss That Frog! is about Emotional Transformation. The title comes from the fairy tale where a princess kisses a frog, and it turns into a prince. In a psychological sense, your "frogs" are the negative experiences, people, or emotions that "look" ugly but contain a hidden lesson or "prince" inside. This is a study in Cognitive Reframing and emotional healing.</p><br>`,
   },
 
   "...": {
@@ -949,43 +1016,6 @@ window.addEventListener("mousemove", (e) => {
     glow.style.top = e.clientY + "px";
   }
 });
-
-// --- 6. BUTTON HANDLER ---
-function setupButtons() {
-  document.querySelectorAll(".book-card button").forEach((button) => {
-    button.onclick = (e) => {
-      e.stopPropagation();
-
-      const bookCard = e.target.closest(".book-card");
-      if (!bookCard) return;
-
-      const bookTitle = bookCard.querySelector("h3")?.innerText || "Unknown";
-
-      alert("Redirecting to secure access channel...");
-
-      const message = `
-📚 ACCESS REQUEST
-
-Book: ${bookTitle}
-
-Status: Pending Access Approval
-Platform: Mastery Vault System
-
-I am requesting access to this manuscript. Please confirm payment steps and release the file.
-
-User Node: Mobile Request
-`;
-
-      alert("Redirecting to secure access channel...");
-
-      window.open(
-        `https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`,
-        "_blank",
-      );
-    };
-  });
-}
-setupButtons();
 
 // --- 7. FILTER ---
 function filterBooks(category) {
@@ -1133,30 +1163,6 @@ function filterVault(category) {
   });
 }
 
-function renderBookCards() {
-  const container = document.getElementById("vault-grid"); // Replace with your actual container ID
-  container.innerHTML = "";
-
-  Object.keys(bookData).forEach((key) => {
-    const book = bookData[key];
-    const isLocked = book.status === "pending";
-
-    const cardHtml = `
-            <div class="book-card ${isLocked ? "locked-status" : ""}">
-                <h3>${book.title}</h3>
-                <img src="${book.image}" alt="${book.title}">
-                <p style="color: ${isLocked ? "#d4af37" : "#fff"}; font-size: 0.8rem; margin: 10px 0;">
-                    ${isLocked ? "ACCESS AUTHORIZATION PENDING" : "ONLY 4 COPIES REMAINING"}
-                </p>
-                <button onclick="showAbout('${key}')">
-                    ${isLocked ? "ARCHIVE LOCKED" : "Request Access Key (" + book.price + ")"}
-                </button>
-            </div>
-        `;
-    container.innerHTML += cardHtml;
-  });
-}
-
 let lastScrollY = window.scrollY;
 const navbar = document.querySelector("header");
 const threshold = 5; // Minimum scroll amount before navbar reacts
@@ -1182,3 +1188,58 @@ window.addEventListener("scroll", () => {
   }
   lastScrollY = currentScrollY;
 });
+
+function showLiveToast() {
+  const actions = [
+    "just acquired 'The Secret'",
+    "is viewing 'Atomic Habits'",
+    "requested access to the Wealth Vault",
+    "unlocked a Mastery Manuscript",
+  ];
+  const randomAction = actions[Math.floor(Math.random() * actions.length)];
+
+  // Create the toast element
+  const toast = document.createElement("div");
+  toast.className = "live-toast";
+  toast.innerHTML = `<span class="online-dot"></span> Someone ${randomAction}`;
+  document.body.appendChild(toast);
+
+  setTimeout(() => {
+    toast.classList.add("show");
+  }, 100);
+  setTimeout(() => {
+    toast.classList.remove("show");
+    setTimeout(() => toast.remove(), 500);
+  }, 4000);
+}
+// Trigger every 25 seconds
+setInterval(showLiveToast, 25000);
+
+// --- UPDATE YOUR RENDER FUNCTION TO THIS ---
+function renderBookCards(booksToRender) {
+  const container = document.getElementById("vault-grid");
+  if (!container) return;
+
+  container.innerHTML = "";
+
+  booksToRender.forEach((book) => {
+    const card = document.createElement("div");
+    card.className = "book-card";
+    card.dataset.category = book.category;
+
+    // Merging Milly's direct link with your Archive style
+    card.innerHTML = `
+            <div class="info-icon" onclick="showAbout('${book.title}')">i</div>
+            <img src="${book.image}" alt="${book.title}">
+            <h3>${book.title}</h3>
+            <p class="price-tag">KES ${book.price || "500"}</p>
+            
+            <a href="https://wa.me/254727253810?text=I%20want%20to%20order%20the%20manuscript:%20${encodeURIComponent(book.title)}" 
+               class="request-btn whatsapp-style">
+               ORDER VIA WHATSAPP
+            </a>
+        `;
+
+    container.appendChild(card);
+  });
+}
