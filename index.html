@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THE ARCHIVE</title>
     <link rel="stylesheet" href="style2.css">
 
@@ -17,11 +17,11 @@
     <nav class="navbar">
         <h1 class="logo">THE ARCHIVE</h1>
         <ul id="navlist">
-            <li><a href="#" onclick="filterBooks('all')">All</a></li>
-            <li><a href="#" onclick="filterBooks('wealth')">Wealth</a></li>
-            <li><a href="#" onclick="filterBooks('Mindset')">mindset</a></li>
+            <li><a href="#" class="active" onclick="filterBooks('all')">All</a></li>
+            <li><a href="#" onclick="filterBooks('Wealth')">Wealth</a></li>
+            <li><a href="#" onclick="filterBooks('Mindset')">Mindset</a></li>
             <li><a href="#" onclick="filterBooks('Novels')">Novels</a></li>
-            <li><a href="#" onclick="filterBooks('psychology')">psychology</a></li>
+            <li><a href="#" onclick="filterBooks('Psychology')">Psychology</a></li>
         </ul>
     </nav>
 
@@ -35,14 +35,16 @@
         <input type="text" id="bookSearch" placeholder="Search for Mastery..." onkeyup="searchMastery()">
     </div>
 
-    <div class="system-status">
-        ACTIVE NODE: NAIROBI • SECURE CONNECTION ESTABLISHED
-    </div>
+    <div id="archive-status">
+        <div class="system-status">
+            ACTIVE NODE: NAIROBI • SECURE CONNECTION ESTABLISHED
+        </div>
 
-    <div class="trust-bar">
-        <div class="trust-item">✔ Instant delivery via WhatsApp</div>
-        <div class="trust-item">✔ Manual verification for secure access</div>
-        <div class="trust-item">✔ Trusted early-access vault system</div>
+        <div class="trust-bar">
+            <div class="trust-item">✔ Instant delivery via WhatsApp</div>
+            <div class="trust-item">✔ Manual verification for secure access</div>
+            <div class="trust-item">✔ Trusted early-access vault system</div>
+        </div>
     </div>
 
     <div class="book-grid">
@@ -51,11 +53,11 @@
 
         <div class="book-card mindset">
             <h3>Atomic Habits</h3>
-            <img src="https://cdnattic.atticbooks.co.ke/img/V115044.jpg"onclick="showAbout('Atomic Habits')">
+            <img src="https://cdnattic.atticbooks.co.ke/img/V115044.jpg" onclick="showAbout('Atomic Habits')">
             <p class="stock-text">Only 3 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -74,17 +76,18 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card wealth">
             <h3>Rich Dad Poor Dad</h3>
-            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRAReAV1ripmBXdQbympunU2IoFkxan4N2NSibnFK78pIPmrJyK1FDbaVp340Y0DfPjvCfx62Wj2u4gDqCF8zHSaA6mpMSo-8pAPVsrx1Krf1u23j8-MNSU&usqp=CAc"onclick="showAbout('Rich Dad Poor Dad')">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRAReAV1ripmBXdQbympunU2IoFkxan4N2NSibnFK78pIPmrJyK1FDbaVp340Y0DfPjvCfx62Wj2u4gDqCF8zHSaA6mpMSo-8pAPVsrx1Krf1u23j8-MNSU&usqp=CAc"
+                onclick="showAbout('Rich Dad Poor Dad')">
             <p class="stock-text">Only 1 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -95,7 +98,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -105,7 +108,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -116,9 +119,9 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
-           
+
         </div>
 
 
@@ -129,7 +132,7 @@
             <p class="stock-text">Only 4 manuscripts remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -139,7 +142,7 @@
             <p class="stock-text">Only 4 manuscripts remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -150,7 +153,7 @@
             <p class="stock-text">Only 4 manuscripts remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -180,7 +183,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 600)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 600</span>
             </a>
         </div>
 
@@ -191,7 +194,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 1000)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 1000</span>
             </a>
         </div>
 
@@ -202,7 +205,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 1000)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 1000</span>
             </a>
         </div>
 
@@ -212,7 +215,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 1000)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 1000</span>
             </a>
         </div>
 
@@ -223,7 +226,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 800)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 800</span>
             </a>
         </div>
 
@@ -234,7 +237,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 600)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 600</span>
             </a>
         </div>
 
@@ -245,7 +248,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 600)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 600</span>
             </a>
         </div>
 
@@ -256,7 +259,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 700)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 700</span>
             </a>
         </div>
 
@@ -267,7 +270,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 800)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 800</span>
             </a>
         </div>
 
@@ -277,7 +280,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 600)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 600</span>
             </a>
         </div>
 
@@ -288,7 +291,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 800)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 800</span>
             </a>
         </div>
 
@@ -299,7 +302,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 800)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 800</span>
             </a>
         </div>
 
@@ -310,7 +313,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 800)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 800</span>
             </a>
         </div>
 
@@ -321,7 +324,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -332,7 +335,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -343,7 +346,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -354,7 +357,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -365,7 +368,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -376,7 +379,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -387,7 +390,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -398,7 +401,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -409,7 +412,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -420,7 +423,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -431,7 +434,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 800)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 800</span>
             </a>
         </div>
 
@@ -443,7 +446,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 800)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 800</span>
             </a>
         </div>
 
@@ -454,7 +457,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 800)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 800</span>
             </a>
         </div>
 
@@ -465,7 +468,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 800)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 800</span>
             </a>
         </div>
 
@@ -476,7 +479,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 800)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 800</span>
             </a>
         </div>
 
@@ -487,7 +490,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 800)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 800</span>
             </a>
         </div>
 
@@ -498,7 +501,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 800)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 800</span>
             </a>
         </div>
 
@@ -509,7 +512,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 800)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 800</span>
             </a>
         </div>
 
@@ -520,7 +523,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 800)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 800</span>
             </a>
         </div>
 
@@ -530,7 +533,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 800)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 800</span>
             </a>
         </div>
 
@@ -541,7 +544,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 800)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 800</span>
             </a>
         </div>
 
@@ -552,7 +555,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 800)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 800</span>
             </a>
         </div>
 
@@ -562,7 +565,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -573,7 +576,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -584,7 +587,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -595,7 +598,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 700)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 700</span>
             </a>
         </div>
 
@@ -606,7 +609,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -617,7 +620,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -628,7 +631,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -639,7 +642,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -650,7 +653,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -661,7 +664,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 600)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 600</span>
             </a>
         </div>
 
@@ -671,7 +674,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -682,7 +685,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 800)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 800</span>
             </a>
         </div>
 
@@ -693,7 +696,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 600)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 600</span>
             </a>
         </div>
 
@@ -704,7 +707,7 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 700)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 700</span>
             </a>
         </div>
 
@@ -715,7 +718,7 @@
             <p class="stock-text">Only 1 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 800)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 800</span>
             </a>
         </div>
 
@@ -726,17 +729,18 @@
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 700)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 700</span>
             </a>
         </div>
 
         <div class="book-card Wealth">
             <h3>Good to Great</h3>
-            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1546097703i/76865.jpg" onclick="showAbout('Good to Great')">
+            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1546097703i/76865.jpg"
+                onclick="showAbout('Good to Great')">
             <p class="stock-text">Only 2 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -746,7 +750,7 @@
             <p class="stock-text">Only 3 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -756,17 +760,18 @@
             <p class="stock-text">Only 5 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Psychology">
             <h3>Solving Single</h3>
-            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1382946513i/18507017.jpg" onclick="showAbout('Solving Single')">
+            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1382946513i/18507017.jpg"
+                onclick="showAbout('Solving Single')">
             <p class="stock-text">Only 1 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -776,37 +781,40 @@
             <p class="stock-text">Only 2 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Wealth">
             <h3>Blue Ocean Strategy</h3>
-            <img src="https://i.ebayimg.com/images/g/yzkAAOSw6hhf~oV1/s-l960.jpg" onclick="showAbout('Blue Ocean Strategy')">
+            <img src="https://i.ebayimg.com/images/g/yzkAAOSw6hhf~oV1/s-l960.jpg"
+                onclick="showAbout('Blue Ocean Strategy')">
             <p class="stock-text">Only 3 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 600)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 600</span>
             </a>
         </div>
 
         <div class="book-card Wealth">
             <h3>Market Wizards</h3>
-            <img src="https://copertine.hoepli.it/hoepli/xxl/978/1118/9781118273050.jpg" onclick="showAbout('Market Wizards')">
+            <img src="https://copertine.hoepli.it/hoepli/xxl/978/1118/9781118273050.jpg"
+                onclick="showAbout('Market Wizards')">
             <p class="stock-text">Only 2 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Novel">
             <h3>The Kite Runner</h3>
-            <img src="https://prestigebookshop.com/wp-content/uploads/2019/02/book-image-3548.jpg" onclick="showAbout('The Kite Runner')">
+            <img src="https://prestigebookshop.com/wp-content/uploads/2019/02/book-image-3548.jpg"
+                onclick="showAbout('The Kite Runner')">
             <p class="stock-text">Only 1 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -816,27 +824,29 @@
             <p class="stock-text">Only 1 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Wealth">
             <h3>The Magic of Thinking Big</h3>
-            <img src="https://gyaanstore.com/cdn/shop/files/52_3bc05ae9-010b-4c3b-a156-8cd3d3b35249.png?v=1757578089&width=493" onclick="showAbout('The Magic of Thinking Big')">
+            <img src="https://gyaanstore.com/cdn/shop/files/52_3bc05ae9-010b-4c3b-a156-8cd3d3b35249.png?v=1757578089&width=493"
+                onclick="showAbout('The Magic of Thinking Big')">
             <p class="stock-text">Only 1 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Psychology">
             <h3>Start With Why</h3>
-            <img src="https://static.wixstatic.com/media/8f5c00_172a7a553e6a4d3cac5c05c697423984~mv2.jpg/v1/fill/w_286,h_444,al_c,lg_1,q_80,enc_avif,quality_auto/8f5c00_172a7a553e6a4d3cac5c05c697423984~mv2.jpg" onclick="showAbout('Start With Why')">
+            <img src="https://static.wixstatic.com/media/8f5c00_172a7a553e6a4d3cac5c05c697423984~mv2.jpg/v1/fill/w_286,h_444,al_c,lg_1,q_80,enc_avif,quality_auto/8f5c00_172a7a553e6a4d3cac5c05c697423984~mv2.jpg"
+                onclick="showAbout('Start With Why')">
             <p class="stock-text">Only 2 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -847,38 +857,41 @@
             <p class="stock-text">Only 5. copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
 
         <div class="book-card mindset">
             <h3>Ego Is the Enemy</h3>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOSvn2olp7w-YrzU6wxb4My5_nM2u46rBmzg&s.jpg" onclick="showAbout('Ego Is the Enemy')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOSvn2olp7w-YrzU6wxb4My5_nM2u46rBmzg&s.jpg"
+                onclick="showAbout('Ego Is the Enemy')">
             <p class="stock-text">Only 1 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Mindset">
             <h3>Think Big</h3>
-            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1348956234i/13465.jpg" onclick="showAbout('Think Big')">
+            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1348956234i/13465.jpg"
+                onclick="showAbout('Think Big')">
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Wealth">
             <h3>The Compound Effect</h3>
-            <img src="https://jamesclear.com/wp-content/uploads/2016/03/TheCompoundEffect-by-DarrenHardy.jpg" onclick="showAbout('The Compound Effect')">
+            <img src="https://jamesclear.com/wp-content/uploads/2016/03/TheCompoundEffect-by-DarrenHardy.jpg"
+                onclick="showAbout('The Compound Effect')">
             <p class="stock-text">Only 2 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -888,7 +901,7 @@
             <p class="stock-text">Only 3 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -898,27 +911,29 @@
             <p class="stock-text">Only 1 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Wealth">
             <h3>Nice Girls Don't Get Rich</h3>
-            <img src="https://www.hachettebookgroup.com/wp-content/uploads/2026/02/9780446694728.jpg?resize=401,600.jpg" onclick="showAbout('Nice Girls Dont Get Rich')">
+            <img src="https://www.hachettebookgroup.com/wp-content/uploads/2026/02/9780446694728.jpg?resize=401,600.jpg"
+                onclick="showAbout('Nice Girls Dont Get Rich')">
             <p class="stock-text">Only 2 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Mindset">
             <h3>The Art of Letting Go</h3>
-            <img src="https://media.thuprai.com/__sized__/front_covers/the-art-of-letting-go_Y0fsYeq-thumbnail-280x405-70.jpg" onclick="showAbout('The Art of Letting Go')">
+            <img src="https://media.thuprai.com/__sized__/front_covers/the-art-of-letting-go_Y0fsYeq-thumbnail-280x405-70.jpg"
+                onclick="showAbout('The Art of Letting Go')">
             <p class="stock-text">Only 5 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -929,127 +944,139 @@
             <p class="stock-text">Only 2 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Psychology">
             <h3>The 15 Commitments of Conscious Leadership</h3>
-            <img src="https://m.media-amazon.com/images/I/61Y221zs0VL._AC_UF1000,1000_QL80_.jpg" onclick="showAbout('The 15 Commitments of Conscious Leadership')">
+            <img src="https://m.media-amazon.com/images/I/61Y221zs0VL._AC_UF1000,1000_QL80_.jpg"
+                onclick="showAbout('The 15 Commitments of Conscious Leadership')">
             <p class="stock-text">Only 1 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Psychology">
             <h3>Gifted Hands</h3>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgv32dZNFY77dApbYf_P3RC02EIGv4sABQrg&s.jpg" onclick="showAbout('Gifted Hands')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgv32dZNFY77dApbYf_P3RC02EIGv4sABQrg&s.jpg"
+                onclick="showAbout('Gifted Hands')">
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
-         <div class="book-card Psychology">
+        <div class="book-card Psychology">
             <h3>How to Lead When You're Not in Charge</h3>
-            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1532093812i/40881894.jpg" onclick="showAbout('How to Lead When You are Not in Charge')">
+            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1532093812i/40881894.jpg"
+                onclick="showAbout('How to Lead When You are Not in Charge')">
             <p class="stock-text">Only 3 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Psychology">
             <h3>The Mountain Is You</h3>
-            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1590806892i/53642699.jpg" onclick="showAbout('The Mountain Is You')">
+            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1590806892i/53642699.jpg"
+                onclick="showAbout('The Mountain Is You')">
             <p class="stock-text">Only 2 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Psychology">
             <h3>Leaders Eat Last</h3>
-            <img src="https://prestigebookshop.com/wp-content/uploads/2019/02/book-image-17410.jpg" onclick="showAbout('Leaders Eat Last')">
+            <img src="https://prestigebookshop.com/wp-content/uploads/2019/02/book-image-17410.jpg"
+                onclick="showAbout('Leaders Eat Last')">
             <p class="stock-text">Only 1 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Psychology">
             <h3>Mindset</h3>
-            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1488174696i/34403537.jpg" onclick="showAbout('Mindset')">
+            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1488174696i/34403537.jpg"
+                onclick="showAbout('Mindset')">
             <p class="stock-text">Only 3 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Mindset">
             <h3>Win Your Inner Battles</h3>
-            <img src="https://m.media-amazon.com/images/I/71LjENIbVIL._UF1000,1000_QL80_.jpg" onclick="showAbout('Win Your Inner Battles')">
+            <img src="https://m.media-amazon.com/images/I/71LjENIbVIL._UF1000,1000_QL80_.jpg"
+                onclick="showAbout('Win Your Inner Battles')">
             <p class="stock-text">Only 1 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Psychology">
             <h3>Hi God, It's Me Again</h3>
-            <img src="https://m.media-amazon.com/images/I/51aZUGihiCS._AC_UF1000,1000_QL80_.jpg" onclick="showAbout('Hi God, It is Me Again')">
+            <img src="https://m.media-amazon.com/images/I/51aZUGihiCS._AC_UF1000,1000_QL80_.jpg"
+                onclick="showAbout('Hi God, It is Me Again')">
             <p class="stock-text">Only 3 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Mindset">
             <h3>The Let Them Theory</h3>
-            <img src="https://m.media-amazon.com/images/I/91ZVf3kNrcL._AC_UF1000,1000_QL80_.jpg" onclick="showAbout('The Let Them Theory')">
+            <img src="https://m.media-amazon.com/images/I/91ZVf3kNrcL._AC_UF1000,1000_QL80_.jpg"
+                onclick="showAbout('The Let Them Theory')">
             <p class="stock-text">Only 1 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Mindset">
             <h3>The Lean Startup</h3>
-            <img src="https://prestigebookshop.com/wp-content/uploads/2019/02/book-image-17446.jpg" onclick="showAbout('The Lean Startup')">
+            <img src="https://prestigebookshop.com/wp-content/uploads/2019/02/book-image-17446.jpg"
+                onclick="showAbout('The Lean Startup')">
             <p class="stock-text">Only 2 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Novels">
             <h3>Verity</h3>
-            <img src="https://honwix.com/uploads/book/cover/68f7c7216e3d37722f1bf267daeb76f25b3b9d73fcdcc36d9804c762929e4125.webp" onclick="showAbout('Verity')">
+            <img src="https://honwix.com/uploads/book/cover/68f7c7216e3d37722f1bf267daeb76f25b3b9d73fcdcc36d9804c762929e4125.webp"
+                onclick="showAbout('Verity')">
             <p class="stock-text">Only 2 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Novels">
             <h3>Maybe Now</h3>
-            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1541746506i/42657538.jpg" onclick="showAbout('Maybe Now')">
+            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1541746506i/42657538.jpg"
+                onclick="showAbout('Maybe Now')">
             <p class="stock-text">Only 2 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -1059,99 +1086,108 @@
             <p class="stock-text">Only 1 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Wealth">
             <h3>Profit First</h3>
-            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1564556201i/30780674.jpg" onclick="showAbout('Profit First')">
+            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1564556201i/30780674.jpg"
+                onclick="showAbout('Profit First')">
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Novels">
             <h3>Black Girls Must Die Exhausted</h3>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQZSyM4k16A8r-owpCsT5OPF2RQe2SYkR1zg&s" onclick="showAbout('Black Girls Must Die Exhausted')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQZSyM4k16A8r-owpCsT5OPF2RQe2SYkR1zg&s"
+                onclick="showAbout('Black Girls Must Die Exhausted')">
             <p class="stock-text">Only 1 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Mindset">
             <h3>Believe It to Achieve It</h3>
-            <img src="https://images2.penguinrandomhouse.com/cover/9781524704872" onclick="showAbout('Believe It to Achieve It')">
+            <img src="https://images2.penguinrandomhouse.com/cover/9781524704872"
+                onclick="showAbout('Believe It to Achieve It')">
             <p class="stock-text">Only 5 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
 
         <div class="book-card Wealth">
             <h3>The Art of Spending Money</h3>
-            <img src="https://i.ebayimg.com/images/g/85QAAeSwQldp2bBN/s-l960.png" onclick="showAbout('The Art of Spending Money')">
+            <img src="https://i.ebayimg.com/images/g/85QAAeSwQldp2bBN/s-l960.png"
+                onclick="showAbout('The Art of Spending Money')">
             <p class="stock-text">Only 3 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Psychology">
             <h3>Understanding the Power and Purpose of Woman</h3>
-            <img src="https://www.keswickbooks.com/cdn/shop/products/9781641230148.jpg?v=1631084800" onclick="showAbout('Understanding the Power and Purpose of Woman')">
+            <img src="https://www.keswickbooks.com/cdn/shop/products/9781641230148.jpg?v=1631084800"
+                onclick="showAbout('Understanding the Power and Purpose of Woman')">
             <p class="stock-text">Only 1 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Novels">
             <h3>His Only Wife</h3>
-            <img src="https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9780861540709/his-only-wife-9780861540709_lg.jpg" onclick="showAbout('His Only Wife')">
+            <img src="https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9780861540709/his-only-wife-9780861540709_lg.jpg"
+                onclick="showAbout('His Only Wife')">
             <p class="stock-text">Only 3 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
 
         <div class="book-card Mindset">
             <h3>The 12 Week Year</h3>
-            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1302134541i/10009377.jpg" onclick="showAbout('The 12 Week Year')">
+            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1302134541i/10009377.jpg"
+                onclick="showAbout('The 12 Week Year')">
             <p class="stock-text">Only 2 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Mindset">
             <h3>Tough Times Never Last but Tough People Do</h3>
-            <img src="https://i.ebayimg.com/images/g/3DcAAeSw9ZFpj1qp/s-l960.jpg" onclick="showAbout('Tough Times Never Last but Tough People Do')">
+            <img src="https://i.ebayimg.com/images/g/3DcAAeSw9ZFpj1qp/s-l960.jpg"
+                onclick="showAbout('Tough Times Never Last but Tough People Do')">
             <p class="stock-text">Only 1 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Psychology">
             <h3>The Power of Habit</h3>
-            <img src="https://m.media-amazon.com/images/I/71aMS2VSfeL._UF1000,1000_QL80_.jpg" onclick="showAbout('The Power of Habit')">
+            <img src="https://m.media-amazon.com/images/I/71aMS2VSfeL._UF1000,1000_QL80_.jpg"
+                onclick="showAbout('The Power of Habit')">
             <p class="stock-text">Only 2 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -1161,207 +1197,227 @@
             <p class="stock-text">Only 1 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Mindset">
             <h3>The Power of Vision</h3>
-            <img src="https://img1.od-cdn.com/ImageType-400/9098-1/BBC/342/F0/%7BBBC342F0-A9A3-4C32-860F-54439F7A3D5F%7DImg400.jpg" onclick="showAbout('The Power of Vision')">
+            <img src="https://img1.od-cdn.com/ImageType-400/9098-1/BBC/342/F0/%7BBBC342F0-A9A3-4C32-860F-54439F7A3D5F%7DImg400.jpg"
+                onclick="showAbout('The Power of Vision')">
             <p class="stock-text">Only 1 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Wealth">
             <h3>The Rules of Wealth</h3>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY5m8j6SLGbFns7PcqYZR5fKsHSmLwszBuTA&s" onclick="showAbout('The Rules of Wealth')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY5m8j6SLGbFns7PcqYZR5fKsHSmLwszBuTA&s"
+                onclick="showAbout('The Rules of Wealth')">
             <p class="stock-text">Only 3 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Novels">
             <h3>The Secret Lives of Baba Segi's Wives</h3>
-            <img src="https://cdnattic.atticbooks.co.ke/img/V324126.png" onclick="showAbout('The Secret Lives of Baba Segis Wives')">
+            <img src="https://cdnattic.atticbooks.co.ke/img/V324126.png"
+                onclick="showAbout('The Secret Lives of Baba Segis Wives')">
             <p class="stock-text">Only 1 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Wealth">
             <h3>The Biblical Road to Financial Freedom</h3>
-            <img src="https://i.ebayimg.com/images/g/pqkAAOSw2AFZrRqK/s-l960.jpg" onclick="showAbout('The Biblical Road to Financial Freedom')">
+            <img src="https://i.ebayimg.com/images/g/pqkAAOSw2AFZrRqK/s-l960.jpg"
+                onclick="showAbout('The Biblical Road to Financial Freedom')">
             <p class="stock-text">Only 1 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Novels">
             <h3>The Girl with the Louding Voice</h3>
-            <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1581128232l/50214741.jpg" onclick="showAbout('The Girl with the Louding Voice')">
+            <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1581128232l/50214741.jpg"
+                onclick="showAbout('The Girl with the Louding Voice')">
             <p class="stock-text">Only 1 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Psychology">
             <h3>Grit</h3>
-            <img src="https://m.media-amazon.com/images/I/71gPBwjsEfL._AC_UF1000,1000_QL80_.jpg" onclick="showAbout('Grit')">
+            <img src="https://m.media-amazon.com/images/I/71gPBwjsEfL._AC_UF1000,1000_QL80_.jpg"
+                onclick="showAbout('Grit')">
             <p class="stock-text">Only 2 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Wealth">
             <h3>Sell or Be Sold</h3>
-            <img src="https://images-na.ssl-images-amazon.com/images/I/616OvChM3RL._UL500_.jpg" onclick="showAbout('Sell or Be Sold')">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/616OvChM3RL._UL500_.jpg"
+                onclick="showAbout('Sell or Be Sold')">
             <p class="stock-text">Only 3 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Psychology">
             <h3>The Power of a Praying Wife</h3>
-            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1400853566i/18054698.jpg" onclick="showAbout('The Power of a Praying Wife')">
+            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1400853566i/18054698.jpg"
+                onclick="showAbout('The Power of a Praying Wife')">
             <p class="stock-text">Only 3 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Wealth">
             <h3>The Mom Test</h3>
-            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1566473431l/52283963.jpg" onclick="showAbout('The Mom Test')">
+            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1566473431l/52283963.jpg"
+                onclick="showAbout('The Mom Test')">
             <p class="stock-text">Only 1 copy remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Psychology">
             <h3>The 16 Undeniable Laws</h3>
-            <img src="https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9798887100098/the-16-undeniable-laws-of-communication-9798887100098_hr.jpg" onclick="showAbout('The 16 Undeniable Laws')">
+            <img src="https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9798887100098/the-16-undeniable-laws-of-communication-9798887100098_hr.jpg"
+                onclick="showAbout('The 16 Undeniable Laws')">
             <p class="stock-text">Only 1 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Psychology">
             <h3>The Power of Character in Leadership</h3>
-            <img src="https://image.kilimall.com/kenya/shop/store/goods/7459/2023/09/1693683996165a7057f9e4d004e35b0bc919d4b6c050f.jpg" onclick="showAbout('The Power of Character in Leadership')">
+            <img src="https://image.kilimall.com/kenya/shop/store/goods/7459/2023/09/1693683996165a7057f9e4d004e35b0bc919d4b6c050f.jpg"
+                onclick="showAbout('The Power of Character in Leadership')">
             <p class="stock-text">Only 2 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Novels">
             <h3>We're Going to Need More Wine</h3>
-            <img src="https://cdnattic.atticbooks.co.ke/img/H822479.jpg" onclick="showAbout('We are Going to Need More Wine')">
+            <img src="https://cdnattic.atticbooks.co.ke/img/H822479.jpg"
+                onclick="showAbout('We are Going to Need More Wine')">
             <p class="stock-text">Only 1 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Wealth">
             <h3>$100M Offers</h3>
-            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1628321365i/58717586.jpg" onclick="showAbout('$100M Offers')">
+            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1628321365i/58717586.jpg"
+                onclick="showAbout('$100M Offers')">
             <p class="stock-text">Only 3 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Psychology">
             <h3>The Spirit of Leadership</h3>
-            <img src="https://i5.walmartimages.com/seo/The-Spirit-of-Leadership-Cultivating-the-Attributes-That-Influence-Human-Action-Paperback-9781641230261_889b2664-f285-42ed-b3f9-1a8ea52bd073.522768b3e9364198b33d9e243b40b25d.jpeg" onclick="showAbout('The Spirit of Leadership')">
+            <img src="https://i5.walmartimages.com/seo/The-Spirit-of-Leadership-Cultivating-the-Attributes-That-Influence-Human-Action-Paperback-9781641230261_889b2664-f285-42ed-b3f9-1a8ea52bd073.522768b3e9364198b33d9e243b40b25d.jpeg"
+                onclick="showAbout('The Spirit of Leadership')">
             <p class="stock-text">Only 2 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Psychology">
             <h3>The Defining Decade</h3>
-            <img src="https://cgassets-1d48b.kxcdn.com/site/assets/files/461432/the-defining-decade-paperback-cover-9781805302513.880x0.jpg" onclick="showAbout('The Defining Decade')">
+            <img src="https://cgassets-1d48b.kxcdn.com/site/assets/files/461432/the-defining-decade-paperback-cover-9781805302513.880x0.jpg"
+                onclick="showAbout('The Defining Decade')">
             <p class="stock-text">Only 1 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Psychology">
             <h3>The 21 Irrefutable Laws of Leadership</h3>
-            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1440064752i/815716.jpg" onclick="showAbout('The 21 Irrefutable Laws of Leadership')">
+            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1440064752i/815716.jpg"
+                onclick="showAbout('The 21 Irrefutable Laws of Leadership')">
             <p class="stock-text">Only 1 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Psychology">
             <h3>He Came to Set the Captives Free</h3>
-            <img src="https://i5.walmartimages.com/seo/He-Came-to-Set-the-Captives-Free-Paperback-9780883683231_05377255-48a6-4d85-bbd0-dc489977cf76.ac731e701aafe7fb19cbb5665bed717c.jpeg" onclick="showAbout('He Came to Set the Captives Free')">
+            <img src="https://i5.walmartimages.com/seo/He-Came-to-Set-the-Captives-Free-Paperback-9780883683231_05377255-48a6-4d85-bbd0-dc489977cf76.ac731e701aafe7fb19cbb5665bed717c.jpeg"
+                onclick="showAbout('He Came to Set the Captives Free')">
             <p class="stock-text">Only 3 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Psychology">
             <h3>The 7 Habits of Highly Effective People</h3>
-            <img src="https://fontanabookshop.com/wp-content/uploads/2020/05/The-7-Habits-of-Highly-Effective-People.jpg" onclick="showAbout('The 7 Habits of Highly Effective People')">
+            <img src="https://fontanabookshop.com/wp-content/uploads/2020/05/The-7-Habits-of-Highly-Effective-People.jpg"
+                onclick="showAbout('The 7 Habits of Highly Effective People')">
             <p class="stock-text">Only 4 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Wealth">
             <h3>The Richest Man in Babylon</h3>
-            <img src="https://store.biggerpockets.com/cdn/shop/products/RMIBfrontfinal_1200x1200.jpg?v=1680018681" onclick="showAbout('The Richest Man in Babylon')">
+            <img src="https://store.biggerpockets.com/cdn/shop/products/RMIBfrontfinal_1200x1200.jpg?v=1680018681"
+                onclick="showAbout('The Richest Man in Babylon')">
             <p class="stock-text">Only 2 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Psychology">
             <h3>Unbroken Curses</h3>
-            <img src="https://g.christianbook.com/dg/product/web/f400/34430EB.jpg" onclick="showAbout('Unbroken Curses')">
+            <img src="https://g.christianbook.com/dg/product/web/f400/34430EB.jpg"
+                onclick="showAbout('Unbroken Curses')">
             <p class="stock-text">Only 1 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -1371,17 +1427,18 @@
             <p class="stock-text">Only 1 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
         <div class="book-card Psychology">
             <h3> Kiss That Frog!</h3>
-            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1344692583i/12860023.jpg" onclick="showAbout('Kiss That Frog!')">
+            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1344692583i/12860023.jpg"
+                onclick="showAbout('Kiss That Frog!')">
             <p class="stock-text">Only 1 copies remaining</p>
             <a href="https://wa.me/254115477579?text=I%20want%20to%20order%20Rich%20Dad%20Poor%20Dad"
                 class="request-btn whatsapp-style">
-                ORDER VIA WHATSAPP (KES 500)
+                ORDER VIA WHATSAPP <span style="margin-left: 8px; opacity: 0.7;">— KES 500</span>
             </a>
         </div>
 
@@ -1391,10 +1448,6 @@
                 <h2 id="modal-title"></h2>
                 <div id="modal-desc"></div>
             </div>
-        </div>
-
-        <div id="social-proof">
-            <div class="pulse-dot"></div><span id="proof-text"></span>
         </div>
 
     </div>
@@ -1407,30 +1460,36 @@
         </div>
     </div>
 
-    <section class="contact-section">
-        <div class="glass-header">
-            <h2>Establish Connection</h2>
-            <p>Feel free to contact me if the book you want isn't visible on the screen.</p>
-        </div>
-
-        <div class="contact-grid">
-            <a href="https://wa.me/254115477579" class="contact-card" target="_blank">
-                <i class="fab fa-whatsapp"></i>
-                <span>WhatsApp Mastery</span>
-            </a>
-            <a href="mailto:brianyobby9@gmail.com" class="contact-card">
-                <i class="fas fa-envelope"></i>
-                <span>Secure Email</span>
-            </a>
-        </div>
-    </section>
-
-    <footer class="mastery-footer">
+    <footer class="main-footer">
         <div class="footer-content">
-            <span class="security-tag"><i class="fas fa-lock"></i> AES-256 ENCRYPTED ENVIRONMENT</span>
-            <p>© 2026 The Mastery Archive</p>
-        </div>
+            <div class="footer-section">
+                <h2 class="footer-logo">THE MASTERY ARCHIVE</h2>
+                <p class="footer-tagline">Your gateway to psychological insights and rare literature.</p>
+                <div class="security-badge">
+                    <span class="lock-icon">🔒</span> AES-256 ENCRYPTED ENVIRONMENT
+                </div>
+            </div>
+
+            <div class="footer-connection">
+                <h3 class="section-title">Establish Connection</h3>
+                <div class="footer-btns">
+                    <a href="#" class="glass-btn">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="#" class="glass-btn">
+                        <i class="fas fa-envelope"></i> Secure Email
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <p>&copy; 2026 The Mastery Archive. All Rights Reserved.</p>
+            </div>
     </footer>
+
+    <button onclick="scrollToTop()" id="topBtn" title="Go to top">
+        <i class="arrow up"></i>
+    </button>
 
     <script src="script.js"></script>
 

@@ -1003,11 +1003,6 @@ function triggerSocialProof() {
   setTimeout(() => box.classList.remove("show"), 6000);
 }
 
-setTimeout(() => {
-  triggerSocialProof();
-  setInterval(triggerSocialProof, 15000);
-}, 3000);
-
 // --- 5. MOUSE GLOW ---
 const glow = document.getElementById("mouse-glow");
 window.addEventListener("mousemove", (e) => {
@@ -1017,40 +1012,33 @@ window.addEventListener("mousemove", (e) => {
   }
 });
 
-// --- 7. FILTER ---
 function filterBooks(category) {
+  // 1. Clean the input (remove spaces and make lowercase)
+  const target = category.trim().toLowerCase();
+
+  // 2. Update Nav Highlight
+  const links = document.querySelectorAll("#navlist li a");
+  links.forEach((link) => {
+    link.classList.remove("active");
+    // Match by comparing the text of the link to our target
+    if (link.textContent.trim().toLowerCase() === target) {
+      link.classList.add("active");
+    }
+  });
+
+  // 3. Filter Books
   const books = document.querySelectorAll(".book-card");
   books.forEach((book) => {
-    if (category === "all" || book.classList.contains(category)) {
+    // Get all classes on the book and convert to lowercase string
+    const bookClasses = book.className.toLowerCase();
+
+    if (target === "all" || bookClasses.includes(target)) {
       book.style.display = "block";
     } else {
       book.style.display = "none";
     }
   });
 }
-
-// --- 8. SEARCH ---
-function searchMastery() {
-  let input = document.getElementById("bookSearch")?.value.toLowerCase() || "";
-  let cards = document.querySelectorAll(".book-card");
-
-  cards.forEach((card) => {
-    let title = card.querySelector("h3")?.innerText.toLowerCase() || "";
-    card.style.display = title.includes(input) ? "block" : "none";
-  });
-}
-
-// --- 9. SCROLL ---
-window.onscroll = function () {
-  const btn = document.getElementById("scrollTop");
-  if (!btn) return;
-
-  if (document.documentElement.scrollTop > 500) {
-    btn.classList.add("show");
-  } else {
-    btn.classList.remove("show");
-  }
-};
 
 // --- 10. RELEASE SYSTEM ---
 function startReleaseProtocols() {
@@ -1106,6 +1094,35 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
+function searchMastery() {
+  const input = document.getElementById("bookSearch").value.toLowerCase();
+  const books = document.querySelectorAll(".book-card");
+
+  // Identify all elements to hide
+  const navbar = document.querySelector(".navbar");
+  const progressContainer = document.querySelector(".progress-container");
+  const statusSection = document.getElementById("archive-status"); // THE NEW LINE
+
+  // Check if the user has typed anything
+  if (input.length > 0) {
+    // HIDE everything when searching
+    if (navbar) navbar.style.display = "none";
+    if (progressContainer) progressContainer.style.display = "none";
+    if (statusSection) statusSection.style.display = "none"; // THE NEW LINE
+  } else {
+    // SHOW everything when search is empty
+    if (navbar) navbar.style.display = "flex";
+    if (progressContainer) progressContainer.style.display = "block";
+    if (statusSection) statusSection.style.display = "block"; // THE NEW LINE
+  }
+
+  // Existing filtering logic for the books
+  books.forEach((book) => {
+    const title = book.querySelector("h3").textContent.toLowerCase();
+    book.style.display = title.includes(input) ? "block" : "none";
+  });
+}
+
 // --- ANALYSIS ---
 function openAnalysis(bookTitle, customText) {
   const panel = document.getElementById("analysis-panel");
@@ -1129,18 +1146,6 @@ function openAnalysis(bookTitle, customText) {
 function closeAnalysis() {
   document.getElementById("analysis-panel")?.classList.remove("open");
 }
-
-window.addEventListener("click", (e) => {
-  const modal = document.getElementById("book-modal");
-  if (!modal) return;
-
-  if (e.target === modal) {
-    modal.classList.remove("glass-open");
-    setTimeout(() => {
-      modal.style.display = "none";
-    }, 300);
-  }
-});
 
 function filterVault(category) {
   const cards = document.querySelectorAll(".book-card");
@@ -1241,5 +1246,29 @@ function renderBookCards(booksToRender) {
         `;
 
     container.appendChild(card);
+  });
+}
+
+// Get the button
+let mybutton = document.getElementById("topBtn");
+
+// When the user scrolls down 20px from the top, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "flex"; // Must be 'flex' to keep the arrow centered
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // This creates the smooth scrolling effect
   });
 }
